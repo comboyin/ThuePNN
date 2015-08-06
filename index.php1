@@ -1,0 +1,626 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script type="text/javascript" src="js_css/jquery.js"></script>
+	<script type="text/javascript" src="js_css/jquery.yiiactiveform.js"></script>
+	<title>Personel Management Portal - Trần Văn Chử</title>
+	<meta name="keywords" content="Personel Management Portal - Trần Văn Chử">
+	<meta name="description" content="Personel Management Portal - Trần Văn Chử">
+	<link rel="SHORTCUT ICON" href="images/logoSTU.ico">
+	<link href="js_css/reset.css" rel="stylesheet" type="text/css">
+	<link href="js_css/general.css" rel="stylesheet" type="text/css">
+
+		
+	<script type="text/javascript" src="js_css/jquery.jcarousel.min.js"></script>    
+	<script type="text/javascript" src="js_css/js/extras.js"></script>
+	<link href="js_css/skin.css" rel="stylesheet" type="text/css">
+
+	<script type="text/javascript">
+		var userId = "0";
+		var lang = "vi";
+		var siteName = "Personel Management Portal";
+		var baseUrl = "http://personnel.stu.edu.vn/";                    
+			
+		jQuery(function() {
+			//jQuery("#mycarousel").jcarousel();
+		});
+	</script>
+	<!--[if lt IE 7]>
+	<script type="text/javascript" src="/themes/classic/js/DD_belatedPNG.js"></script>
+	<![endif]-->
+	<!--[if IE 9]>
+	<style>
+		#header #menu li a { padding: 0 16px; }
+	</style>
+	<![endif]-->
+</head>
+
+<body>
+<div id="container">
+    <div class="container-wrapper">
+        <!-- header -->
+        <style>
+#header .date-search .search .btn { width:44px; }
+#header .date-search .search .text { width: 153px; }
+</style>
+<div id="header">
+    <p class="logo"><a href="#">
+        <object width="250" height="213" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" id="flashfirebug0" name="flashfirebug0">
+            <param name="movie" value="http://personnel.stu.edu.vn/images/flash/logo.swf">
+            <param name="quality" value="high">
+            <param name="wmode" value="transparent">
+            <embed width="250" height="213" src="http://personnel.stu.edu.vn/images/flash/logo.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" wmode="transparent" id="flashfirebug0" name="flashfirebug0">
+        </object>
+    </a></p>
+    <p class="text-1">Trường Đại học Công Nghệ Sài Gòn</p>
+    <ul class="language">
+        <li class="vietnamese"><a href="http://personnel.stu.edu.vn/vi">Viet Nam</a></li>
+        <li class="english"><a href="http://personnel.stu.edu.vn/en">English</a></li>
+    </ul>
+    <p class="text-2">Cổng quản lý nhân sự</p>
+    <ul id="menu">
+        <li id="menu_home"><a href="http://personnel.stu.edu.vn" class="home"><span>Trang Chủ</span></a></li>
+        <li id="menu_hoidongquantri" class=""><a href="http://personnel.stu.edu.vn/vi/hoi-dong-quan-tri.html">HĐ Quản Trị</a></li>
+        <li id="menu_bangiamhieu"><a href="http://personnel.stu.edu.vn/vi/ban-giam-hieu.html">Ban Giám Hiệu</a></li>
+        <li id="menu_faculty"><a href="http://personnel.stu.edu.vn/vi/phong-ban.html">Khoa</a>
+                        <ul class="subMenuList">
+                
+            <li id="submenu_khoa-co-khi"><a href="http://personnel.stu.edu.vn/vi/khoa/1/khoa-co-khi.html"><span>Khoa Cơ Khí</span></a></li>            <li id="submenu_khoa-cong-nghe-thong-tin"><a href="http://personnel.stu.edu.vn/vi/khoa/2/khoa-cong-nghe-thong-tin.html"><span>Khoa Công Nghệ Thông Tin</span></a></li>            <li id="submenu_khoa-cong-nghe-thuc-pham"><a href="http://personnel.stu.edu.vn/vi/khoa/3/khoa-cong-nghe-thuc-pham.html"><span>Khoa Công Nghệ Thực Phẩm</span></a></li>            <li id="submenu_khoa-design"><a href="http://personnel.stu.edu.vn/vi/khoa/4/khoa-design.html"><span>Khoa Design</span></a></li>            <li id="submenu_khoa-dien-dien-tu"><a href="http://personnel.stu.edu.vn/vi/khoa/5/khoa-dien-dien-tu.html"><span>Khoa Điện - Điện Tử</span></a></li>            <li id="submenu_khoa-ky-thuat-cong-trinh"><a href="http://personnel.stu.edu.vn/vi/khoa/6/khoa-ky-thuat-cong-trinh.html"><span>Khoa Kỹ Thuật Công Trình</span></a></li>            <li id="submenu_khoa-quan-tri-kinh-doanh" class="last"><a href="http://personnel.stu.edu.vn/vi/khoa/7/khoa-quan-tri-kinh-doanh.html"><span>Khoa Quản Trị Kinh Doanh</span></a></li>        
+<script type="text/javascript">
+    jQuery(function(){        
+       jQuery("#menu li ul").each(function(){ 
+           jQuery(this).find("li").last().addClass("last"); 
+       });
+       jQuery(".subMenuList").each(function(){
+           jQuery(this).find("li").each(function(){
+               if(jQuery(this).attr("id") == "submenu_chu.tranvan@stu.edu.vn")
+               {
+                   jQuery(this).addClass("active");
+               }
+           });
+       });
+    });
+</script>            </ul>
+        </li>
+        
+        <li id="menu_department" class="active"><a href="http://personnel.stu.edu.vn/vi/khoa.html">Phòng - Ban</a>
+            <ul class="subMenuList">
+                
+            <li id="submenu_phong-hanh-chinh-quan-tri"><a href="http://personnel.stu.edu.vn/vi/phong/10/phong-hanh-chinh-quan-tri.html"><span>Phòng Hành Chính Quản Trị</span></a></li>            <li id="submenu_phong-dao-tao"><a href="http://personnel.stu.edu.vn/vi/phong/11/phong-dao-tao.html"><span>Phòng Đào Tạo</span></a></li>            <li id="submenu_phong-quan-ly-khoa-hoc-doi-ngoai"><a href="http://personnel.stu.edu.vn/vi/phong/12/phong-quan-ly-khoa-hoc-doi-ngoai.html"><span>Phòng Quản Lý Khoa Học - Đối Ngoại</span></a></li>            <li id="submenu_phong-ke-hoach-tai-chinh"><a href="http://personnel.stu.edu.vn/vi/phong/13/phong-ke-hoach-tai-chinh.html"><span>Phòng Kế Hoạch Tài Chính</span></a></li>            <li id="submenu_phong-cong-tac-sinh-vien"><a href="http://personnel.stu.edu.vn/vi/phong/14/phong-cong-tac-sinh-vien.html"><span>Phòng Công Tác Sinh Viên</span></a></li>            <li id="submenu_ban-thanh-tra"><a href="http://personnel.stu.edu.vn/vi/phong/15/ban-thanh-tra.html"><span>Ban Thanh Tra</span></a></li>            <li id="submenu_ban-khoa-hoc-co-ban"><a href="http://personnel.stu.edu.vn/vi/phong/16/ban-khoa-hoc-co-ban.html"><span>Ban Khoa Học Cơ Bản</span></a></li>            <li id="submenu_ban-dam-bao-kiem-dinh-chat-luong-giao-duc" class="last"><a href="http://personnel.stu.edu.vn/vi/phong/23/ban-dam-bao-kiem-dinh-chat-luong-giao-duc.html"><span>Ban Đảm Bảo &amp; Kiểm Định Chất Lượng Giáo Dục</span></a></li>        
+<script type="text/javascript">
+    jQuery(function(){        
+       jQuery("#menu li ul").each(function(){ 
+           jQuery(this).find("li").last().addClass("last"); 
+       });
+       jQuery(".subMenuList").each(function(){
+           jQuery(this).find("li").each(function(){
+               if(jQuery(this).attr("id") == "submenu_chu.tranvan@stu.edu.vn")
+               {
+                   jQuery(this).addClass("active");
+               }
+           });
+       });
+    });
+</script>            </ul>
+        </li>
+        <li id="menu_center"><a href="http://personnel.stu.edu.vn/vi/trung-tam.html">Trung Tâm</a></li>
+        <li id="menu_union"><a href="http://personnel.stu.edu.vn/vi/doan-hoi.html">Đoàn Thể</a></li>
+        <li id="menu_email"><a href="http://mail.stu.edu.vn/">Email</a></li>
+        <li class="last" id="menu_contact"><a href="http://personnel.stu.edu.vn/vi/lien-he.html">Liên Hệ</a></li>
+    </ul>
+    <div class="date-search">
+        <p>Thứ năm, 30 - 07 - 2015,  11:15, GMT+7</p>
+        <p class="welcome" style="text-transform: uppercase">CHÀO MỪNG BẠN ĐẾN CỔNG QUẢN LÝ NHÂN SỰ STU !</p>
+        <fieldset class="search" id="searchForm">
+            <input id="keywordEvent" onfocus="this.value = ''" name="keywordEvent" type="text" value="--- Nhập nội dung cần tìm ---" class="text">
+            <input type="submit" value="Tìm" id="searchAllSite" class="btn">
+        </fieldset>
+    </div>
+</div>
+<script type="text/javascript">
+    jQuery("#menu li").each(function(){
+       if(jQuery(this).attr("id") == "menu_department")
+       {
+           jQuery(this).addClass("active");
+       }
+   });
+</script>
+<script type="text/javascript">
+    jQuery(function(){      
+        //Check if user press enter in textbox search
+        jQuery('#keywordEvent').bind((jQuery.browser.opera ? "keypress" : "keydown"), function(event) { 
+            // track last key pressed
+            lastKeyPressCode = event.keyCode;
+            
+            switch(event.keyCode) {        
+                case 13:            
+                    gSearchActivate();
+                break;        
+            }
+        });            
+        jQuery("#searchAllSite").click(function(){
+            gSearchActivate();
+        });
+    });
+    function gSearchActivate()
+    {
+        var x=document.getElementById("iframeGSearch");
+        var y=(x.contentWindow || x.contentDocument);
+        //alert(y.jQuery(".cseResult").html());            
+        jQuery("#main-content-web").css("display", "none");
+        jQuery("#searchForm").css("display", "none");        
+        y.jQuery("input[name=search]").val(jQuery("#keywordEvent").val());
+        y.jQuery("input[name=search]").focus();
+        y.jQuery("div[class=cseResult]").css("display", "block");
+        y.jQuery("input[class=gsc-search-button]").submit();
+        document.getElementById("iframeGSearch").style.height = "1200px";
+    }
+</script>
+        <!-- header.end -->
+        <!-- main -->
+        <div id="main">
+            <div id="main-content-web">
+                <div class="clear-fix" id="checkSignIn" style="min-height: 275px;">
+    <div class="group-1" id="personelDetail"><h1 class="title">Lý Lịch Tóm Lược của Nhân viên</h1>
+<div class="content">
+    <div class="pic"><img style="width: 120px;" src="/uploads/users/469/chu.tranvan@stu.edu.vn_1429084377.png" alt="Nhân viên"></div>
+    <div class="info">
+        <ul class="list">
+            <li class="type-1">Họ và tên: <span>Trần Văn Chử</span></li>
+            <li class="type-5">Giới tính: <span>Nam</span></li>
+                            <li>Ngày sinh: <span>07 -05 - 1961</span></li>
+                        <li>Học hàm: <span></span></li>
+                            <li>Quê quán: <span>Thái Bình</span></li>
+                                        <li>Dân tộc: <span>kinh</span></li>
+                        <li>Chức vụ: <span>Nhân viên</span></li>                    
+            <li>Học vị: <span>Trung học chuyên nghiệp</span></li>
+                            <li>Trình độ ngoại ngữ: <span></span></li>
+                    </ul>
+        <p class="view-detail"><a href="http://personnel.stu.edu.vn/vi/xem-chi-tiet/469/chu.tranvan@stu.edu.vn.html">Xem chi tiết</a></p>
+    </div>
+</div>
+<p class="update-info"><a href="http://personnel.stu.edu.vn/vi/cap-nhat/469/chu.tranvan@stu.edu.vn.html">Cập nhật thông tin mới!</a></p>
+</div>
+    <style>
+#login-form .input-1 label .required { display: none; }
+#login-form .input-1 .errorMessage { margin-left: 75px; }
+#login-form .form .errorSummary { background: none; }
+#login-form .form .errorSummary li { color: #F00; padding-left: 10px; }
+#login-form .form .errorSummary p { display: none;}
+</style>
+<div class="group-2">
+    <p class="title"><strong>Đăng nhập</strong></p>
+    <form id="login-form" action="/vi/chi-tiet/469/chu.tranvan@stu.edu.vn.html" method="post">        
+    <fieldset class="form">
+        <div id="login-form_es_" class="errorSummary" style="display:none"><p>Xin hãy sửa lại những lỗi nhập liệu sau:</p>
+<ul><li>dummy</li></ul></div>        <div class="input-1">                        
+            <label for="LoginForm_username" class="required">Tài Khoản <span class="required">*</span></label>            <input class="text-1" name="LoginForm[username]" id="LoginForm_username" type="text">            <div id="LoginForm_username_em_" class="errorMessage" style="display:none"></div>        </div>
+        <div class="input-1">
+            <label for="LoginForm_password" class="required">Mật Khẩu <span class="required">*</span></label>            <input class="text-1" name="LoginForm[password]" id="LoginForm_password" type="password">            <div id="LoginForm_password_em_" class="errorMessage" style="display:none"></div>        </div>
+        <p class="note"><em>(Đăng nhập để xem chi tiết)</em></p>
+        <div class="output" style="padding-left: 65px;">
+            <input type="submit" value="Đăng nhập" class="btn">
+        </div>
+    </fieldset>
+    <div class="link">
+        <span class="new"><a href="http://personnel.stu.edu.vn/vi/forgotPassword#content">Quên mật khẩu</a></span> 
+        <span class="all"><a href="http://personnel.stu.edu.vn/vi/active#content">Kích hoạt tài khoản</a></span>
+    </div>
+    </form></div></div>
+<div class="hr-list">
+    <p class="title"><strong>Các nhân sự khác</strong></p><a name="listPerson"></a>
+    <div class="content clear-fix" id="listPersonItems" style="height: 271px;">
+        <!-- Loading box. Start -->
+
+ 
+    <div id="loadingObj1439114157" style="float: left; text-align: center; width: 980px; border: 1px solid #C6EAFA; height: 175px;"><ul class="clear-fix" style="width: 900px;" id="otherPersonelSubList">
+    
+                    <li>
+                        <a href="#id=461" alt="vu.phamhuy@stu.edu.vn" title="Phạm Huy Vũ">
+                            <strong>KSCĐ. Phạm Huy Vũ</strong>
+                            <img style="width:129px; height:162px;" src="/themes/classic/images/pattern-2.png" alt="Phạm Huy Vũ">
+                            <span>Nhân viên</span>
+                            (Phòng Công Tác Sinh Viên)
+                        </a>
+                    </li>          
+                
+                    <li>
+                        <a href="#id=454" alt="son.nguyenthanh@stu.edu.vn" title="Nguyễn Thanh Sơn">
+                            <strong>KS. Nguyễn Thanh Sơn</strong>
+                            <img style="width:129px; height:162px;" src="/uploads/users/454/son.nguyenthanh@stu.edu.vn_1418263650.png" alt="Nguyễn Thanh Sơn">
+                            <span>Nhân viên</span>
+                            (Phòng Quản Lý Khoa Học - Đối Ngoại)
+                        </a>
+                    </li>          
+                
+                    <li>
+                        <a href="#id=453" alt="dao.truongthianh@stu.edu.vn" title="Trương Thị Anh Đào">
+                            <strong>TS. Trương Thị Anh Đào</strong>
+                            <img style="width:129px; height:162px;" src="/uploads/users/453/dao.truongthianh@stu.edu.vn_1418264696.png" alt="Trương Thị Anh Đào">
+                            <span>Giảng viên</span>
+                            (Ban Khoa Học Cơ Bản)
+                        </a>
+                    </li>          
+                
+                    <li>
+                        <a href="#id=448" alt="van.haucong@stu.edu.vn" title="Hầu Công Văn">
+                            <strong>Hầu Công Văn</strong>
+                            <img style="width:129px; height:162px;" src="/themes/classic/images/pattern-2.png" alt="Hầu Công Văn">
+                            <span>Nhân viên</span>
+                            (Phòng Đào Tạo)
+                        </a>
+                    </li>          
+                
+                    <li>
+                        <a href="#id=447" alt="trung.phamlenhat@stu.edu.vn" title="Phạm Lê Nhật Trung">
+                            <strong>Phạm Lê Nhật Trung</strong>
+                            <img style="width:129px; height:162px;" src="/uploads/users/447/trung.phamlenhat@stu.edu.vn_1418263897.png" alt="Phạm Lê Nhật Trung">
+                            <span>Nhân viên</span>
+                            (Phòng Công Tác Sinh Viên)
+                        </a>
+                    </li>          
+                                        
+</ul>
+            
+    <div class="pager">
+        <span id="yw0" class="yiiPager">
+<a class="type" href="#page=1"><img src="images/ico-arrow-4.gif" alt="tới"></a>
+<strong>1</strong>
+<a href="#page=2">2</a>
+<a href="#page=3">3</a>
+<a href="#page=4">4</a>
+<a href="#page=5">5</a>
+<a href="#page=6">6</a>
+<a href="#page=7">7</a>
+<a href="#page=8">8</a>
+<a href="#page=9">9</a>
+<a href="#page=10">10</a>
+<a class="type" href="#page=2"><img src="images/ico-arrow-3.gif" alt="trước"></a>
+</span>            
+    </div>
+          
+</div>    
+
+<!-- Loading box. End -->
+<script type="text/javascript">
+jQuery(function(){
+    
+    var params = '{"department_faculty_other":"15","type":3,"excludeId":"469"}';
+    var wn = "OtherPersonelSub";
+    //console.log(wn);
+    jQuery.ajax({
+        type: 'post',
+        url: 'http://personnel.stu.edu.vn/'+lang+'/lazyLoad',
+        data: 'n=OtherPersonelSub&p='+params,
+        success: function(html){
+            if(html == "")
+            {
+                jQuery("#loadingObj1439114157").remove();
+                if(wn == "LastestPersonel")
+                {
+                    jQuery("#mycarousel").css("width", "980px");
+                    jQuery("#mycarousel").html('<li style="text-align: center; width: 980px; border: 1px solid #C6EAFA; height: 115px; font-size:1.2em;padding-top:60px; color:#F68B3B; font-weight:bold;">Đang cập nhật nội dung</li>');
+                }
+            }            
+            else
+            {
+                if(wn == "LastestPersonel")
+                {
+                    jQuery("#loadingObj1439114157").remove();
+                    jQuery("#mycarousel").html(html);
+                    jQuery("#mycarousel").jcarousel();
+                }
+                else if(wn == "PersonelDetail")
+                {
+                    jQuery("#loadingObj1439114157").remove();
+                    jQuery("#personelDetail").html(html);
+                }
+                else
+                {
+                    jQuery("#loadingObj1439114157").html(html);        
+                }
+                
+            }
+        }
+    });
+
+});
+</script>    </div>
+</div><!--Nhan su moi-->    
+<div class="section-1">
+    <!-- select box -->
+<script type="text/javascript" src="js_css/jquery.selectbox-1.2.js"></script>
+<link rel="stylesheet" href="js_css/selectbox.css" media="screen">
+<div class="title">
+    <strong class="type">NHÂN SỰ MỚI</strong>
+    <div class="filter">
+        <label style="float: left;">Lọc Thông Tin:</label>
+        <div class="header-selectbox">
+            <input id="filterInformation_input" type="text" class="selectbox" autocomplete="off" readonly="" tabindex="0" style="width: 238px;"><div id="filterInformation_container" class="selectbox-wrapper" style="display: none; width: 243px;"><div class="header-selectbox-wapper-1"><div class="header-selectbox-wapper-2"></div></div><ul><li id="filterInformation_input_0" class="selected">--------------------- Tất cả ---------------------&nbsp;</li><li id="filterInformation_input_chutichhoidongquantri">- Chủ tịch hội đồng quản trị&nbsp;</li><li id="filterInformation_input_hieutruong">- Hiệu trưởng&nbsp;</li><li id="filterInformation_input_truongphonghanhchanhquantri">- Trưởng phòng hành chánh - quản trị&nbsp;</li><li id="filterInformation_input_phophonghanhchanhquantri">- Phó phòng hành chánh - quản trị&nbsp;</li><li id="filterInformation_input_chuyenvienquanlynhansu">- Chuyên viên quản lý nhân sự&nbsp;</li><li id="filterInformation_input_truongkhoa">- Trưởng khoa&nbsp;</li><li id="filterInformation_input_truongphong">- Trưởng phòng&nbsp;</li><li id="filterInformation_input_nhanvien">- Nhân viên&nbsp;</li><li id="filterInformation_input_giangvien">- Giảng viên&nbsp;</li><li id="filterInformation_input_phohieutruong">- Phó Hiệu Trưởng&nbsp;</li><li id="filterInformation_input_nhanvienquanlyphannguoidung">- Nhân viên quản lý phần người dùng&nbsp;</li><li id="filterInformation_input_photruongphong">- Phó Trưởng Phòng&nbsp;</li><li id="filterInformation_input_phochutichhdqt">- Phó chủ tịch HĐQT&nbsp;</li><li id="filterInformation_input_uyvienhdqt">- Ủy viên HĐQT&nbsp;</li><li id="filterInformation_input_truongban">- Trưởng Ban&nbsp;</li><li id="filterInformation_input_phoban">- Phó Ban&nbsp;</li><li id="filterInformation_input_truongtrungtam">- Trưởng Trung Tâm&nbsp;</li><li id="filterInformation_input_photrungtam">- Phó Trung Tâm&nbsp;</li><li id="filterInformation_input_phokhoa">- Phó Khoa&nbsp;</li><li id="filterInformation_input_chuyenvien">- Chuyên viên&nbsp;</li><li id="filterInformation_input_troly">- Trợ lý&nbsp;</li><li id="filterInformation_input_chutichcongdoan">- Chủ tịch Công đoàn&nbsp;</li><li id="filterInformation_input_chutichhoisinhvien">- Chủ tịch Hội sinh viên&nbsp;</li><li id="filterInformation_input_bithudoanthanhnien" class="unactive">- Bí thư Đoàn thanh niên&nbsp;</li></ul></div><select id="filterInformation" style="width: 240px; display: none;" class="myselectbox">
+                <option value="0">--------------------- Tất cả ---------------------</option>
+                <option value="chutichhoidongquantri">- Chủ tịch hội đồng quản trị</option><option value="hieutruong">- Hiệu trưởng</option><option value="truongphonghanhchanhquantri">- Trưởng phòng hành chánh - quản trị</option><option value="phophonghanhchanhquantri">- Phó phòng hành chánh - quản trị</option><option value="chuyenvienquanlynhansu">- Chuyên viên quản lý nhân sự</option><option value="truongkhoa">- Trưởng khoa</option><option value="truongphong">- Trưởng phòng</option><option value="nhanvien">- Nhân viên</option><option value="giangvien">- Giảng viên</option><option value="phohieutruong">- Phó Hiệu Trưởng</option><option value="nhanvienquanlyphannguoidung">- Nhân viên quản lý phần người dùng</option><option value="photruongphong">- Phó Trưởng Phòng</option><option value="phochutichhdqt">- Phó chủ tịch HĐQT</option><option value="uyvienhdqt">- Ủy viên HĐQT</option><option value="truongban">- Trưởng Ban</option><option value="phoban">- Phó Ban</option><option value="truongtrungtam">- Trưởng Trung Tâm</option><option value="photrungtam">- Phó Trung Tâm</option><option value="phokhoa">- Phó Khoa</option><option value="chuyenvien">- Chuyên viên</option><option value="troly">- Trợ lý</option><option value="chutichcongdoan">- Chủ tịch Công đoàn</option><option value="chutichhoisinhvien">- Chủ tịch Hội sinh viên</option><option value="bithudoanthanhnien">- Bí thư Đoàn thanh niên</option>            </select>
+        </div>
+    </div>
+</div>
+<div class=" jcarousel-skin-tango"><div class="jcarousel-container jcarousel-container-horizontal" style="position: relative; display: block;"><div class="jcarousel-clip jcarousel-clip-horizontal" style="overflow: hidden; position: relative;"><ul id="mycarousel" class="jcarousel-list jcarousel-list-horizontal" style="height: 190px; overflow: hidden; position: relative; top: 0px; margin: 0px; padding: 0px; left: 0px; width: 5028px;">
+
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-1 jcarousel-item-1-horizontal" jcarouselindex="1" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/469/chu.tranvan@stu.edu.vn.html"><strong>THCN. Trần Văn Chử</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/469/chu.tranvan@stu.edu.vn_1429084377.png" alt="Trần Văn Chử"><br>
+                    <span class="type-1">Nhân viên</span><br>
+                    <span class="type-2">Ban Thanh Tra</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-2 jcarousel-item-2-horizontal" jcarouselindex="2" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/468/nguyen.nguyentananh.html"><strong>CN. Nguyễn Tấn Anh Nguyên</strong><br>
+                    <img style="width:88px; height:116px;" src="/themes/classic/images/pattern.png" alt="Nguyễn Tấn Anh Nguyên"><br>
+                    <span class="type-1">Nhân viên</span><br>
+                    <span class="type-2">Khoa Công Nghệ Thực Phẩm</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-3 jcarousel-item-3-horizontal" jcarouselindex="3" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/464/nga.hothithu@stu.edu.vn.html"><strong>TS. Hồ Thị Thu Nga</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/464/nga.hothithu@stu.edu.vn_1420594222.png" alt="Hồ Thị Thu Nga"><br>
+                    <span class="type-1">Giảng viên</span><br>
+                    <span class="type-2">Khoa Cơ Khí</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-4 jcarousel-item-4-horizontal" jcarouselindex="4" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/462/han.luongthi@stu.edu.vn.html"><strong>ThS. Lương Thị Hân</strong><br>
+                    <img style="width:88px; height:116px;" src="/themes/classic/images/pattern.png" alt="Lương Thị Hân"><br>
+                    <span class="type-1">Giảng viên</span><br>
+                    <span class="type-2">Khoa Quản Trị Kinh Doanh</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-5 jcarousel-item-5-horizontal" jcarouselindex="5" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/461/vu.phamhuy@stu.edu.vn.html"><strong>KSCĐ. Phạm Huy Vũ</strong><br>
+                    <img style="width:88px; height:116px;" src="/themes/classic/images/pattern.png" alt="Phạm Huy Vũ"><br>
+                    <span class="type-1">Nhân viên</span><br>
+                    <span class="type-2">Phòng Công Tác Sinh Viên</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-6 jcarousel-item-6-horizontal" jcarouselindex="6" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/460/nhien.phungviet@stu.edu.vn.html"><strong>ThS. Phùng Viết Nhiên </strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/460/nhien.phungviet@stu.edu.vn_1418269171.png" alt="Phùng Viết Nhiên "><br>
+                    <span class="type-1">Giảng viên</span><br>
+                    <span class="type-2">Khoa Quản Trị Kinh Doanh</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-7 jcarousel-item-7-horizontal" jcarouselindex="7" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/458/Duy.phamvandan@stu.edu.vn.html"><strong>ThS. Phạm Văn Đan Duy</strong><br>
+                    <img style="width:88px; height:116px;" src="/themes/classic/images/pattern.png" alt="Phạm Văn Đan Duy"><br>
+                    <span class="type-1">Giảng viên</span><br>
+                    <span class="type-2">Khoa Quản Trị Kinh Doanh</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-8 jcarousel-item-8-horizontal" jcarouselindex="8" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/457/Nhung.nguyenthituyet@stu.edu.vn.html"><strong>ThS. Nguyễn Thị Tuyết Nhung</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/457/Nhung.nguyenthituyet@stu.edu.vn_1418264179.png" alt="Nguyễn Thị Tuyết Nhung"><br>
+                    <span class="type-1">Giảng viên</span><br>
+                    <span class="type-2">Khoa Quản Trị Kinh Doanh</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-9 jcarousel-item-9-horizontal" jcarouselindex="9" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/456/chang.nguyennhu@stu.edu.vn.html"><strong>ThS. Nguyễn Như Chang</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/456/chang.nguyennhu@stu.edu.vn_1418264571.png" alt="Nguyễn Như Chang"><br>
+                    <span class="type-1">Giảng viên</span><br>
+                    <span class="type-2">Khoa Quản Trị Kinh Doanh</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-10 jcarousel-item-10-horizontal" jcarouselindex="10" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/455/Truc.dothithanh@stu.edu.vn.html"><strong>ThS. Đỗ Thị Thanh Trúc</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/455/Truc.dothithanh@stu.edu.vn_1418264609.png" alt="Đỗ Thị Thanh Trúc"><br>
+                    <span class="type-1">Giảng viên</span><br>
+                    <span class="type-2">Khoa Quản Trị Kinh Doanh</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-11 jcarousel-item-11-horizontal" jcarouselindex="11" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/454/son.nguyenthanh@stu.edu.vn.html"><strong>KS. Nguyễn Thanh Sơn</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/454/son.nguyenthanh@stu.edu.vn_1418263650.png" alt="Nguyễn Thanh Sơn"><br>
+                    <span class="type-1">Nhân viên</span><br>
+                    <span class="type-2">Phòng Quản Lý Khoa Học - Đối Ngoại</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-12 jcarousel-item-12-horizontal" jcarouselindex="12" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/453/dao.truongthianh@stu.edu.vn.html"><strong>TS. Trương Thị Anh Đào</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/453/dao.truongthianh@stu.edu.vn_1418264696.png" alt="Trương Thị Anh Đào"><br>
+                    <span class="type-1">Giảng viên</span><br>
+                    <span class="type-2">Ban Khoa Học Cơ Bản</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-13 jcarousel-item-13-horizontal" jcarouselindex="13" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/452/tam.nguyenthi@stu.edu.vn.html"><strong>ThS. Nguyễn Thị Tâm</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/452/tam.nguyenthi@stu.edu.vn_1418264766.png" alt="Nguyễn Thị Tâm"><br>
+                    <span class="type-1">Giảng viên</span><br>
+                    <span class="type-2">Khoa Công Nghệ Thông Tin</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-14 jcarousel-item-14-horizontal" jcarouselindex="14" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/450/hai.tonthathoang@stu.edu.vn.html"><strong>TS. Tôn Thất Hoàng Hải</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/450/hai.tonthathoang@stu.edu.vn_1418264089.png" alt="Tôn Thất Hoàng Hải"><br>
+                    <span class="type-1">Giảng viên</span><br>
+                    <span class="type-2">Khoa Quản Trị Kinh Doanh</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-15 jcarousel-item-15-horizontal" jcarouselindex="15" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/449/anh.vutran@stu.edu.vn.html"><strong>ThS. Vũ Trần Anh</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/449/anh.vutran@stu.edu.vn_1418264051.png" alt="Vũ Trần Anh"><br>
+                    <span class="type-1">Giảng viên</span><br>
+                    <span class="type-2">Khoa Quản Trị Kinh Doanh</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-16 jcarousel-item-16-horizontal" jcarouselindex="16" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/448/van.haucong@stu.edu.vn.html"><strong>Hầu Công Văn</strong><br>
+                    <img style="width:88px; height:116px;" src="/themes/classic/images/pattern.png" alt="Hầu Công Văn"><br>
+                    <span class="type-1">Nhân viên</span><br>
+                    <span class="type-2">Phòng Đào Tạo</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-17 jcarousel-item-17-horizontal" jcarouselindex="17" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/447/trung.phamlenhat@stu.edu.vn.html"><strong>Phạm Lê Nhật Trung</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/447/trung.phamlenhat@stu.edu.vn_1418263897.png" alt="Phạm Lê Nhật Trung"><br>
+                    <span class="type-1">Nhân viên</span><br>
+                    <span class="type-2">Phòng Công Tác Sinh Viên</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-18 jcarousel-item-18-horizontal" jcarouselindex="18" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/446/phuong.nguyenthitruc@stu.edu.vn.html"><strong>ThS. Nguyễn Thị Trúc Phương</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/446/phuong.nguyenthitruc@stu.edu.vn_1418263796.png" alt="Nguyễn Thị Trúc Phương"><br>
+                    <span class="type-1">Giảng viên</span><br>
+                    <span class="type-2">Ban Khoa Học Cơ Bản</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-19 jcarousel-item-19-horizontal" jcarouselindex="19" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/445/phi.levan@stu.edu.vn.html"><strong>TS. Lê Văn Phi</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/445/phi.levan@stu.edu.vn_1418264125.png" alt="Lê Văn Phi"><br>
+                    <span class="type-1">Giảng viên</span><br>
+                    <span class="type-2">Khoa Quản Trị Kinh Doanh</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-20 jcarousel-item-20-horizontal" jcarouselindex="20" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/444/thuy.nguyenthithu@stu.edu.vn.html"><strong>CN. Nguyễn Thị Thu Thuỷ</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/444/thuy.nguyenthithu@stu.edu.vn_1418263949.png" alt="Nguyễn Thị Thu Thuỷ"><br>
+                    <span class="type-1">Nhân viên</span><br>
+                    <span class="type-2">Phòng Kế Hoạch Tài Chính</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-21 jcarousel-item-21-horizontal" jcarouselindex="21" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/443/te.nguyenan@stu.edu.vn.html"><strong>TS. Nguyễn An Tế</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/443/te.nguyenan@stu.edu.vn_1400722539.png" alt="Nguyễn An Tế"><br>
+                    <span class="type-1">Phó Khoa</span><br>
+                    <span class="type-2">Khoa Công Nghệ Thông Tin</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-22 jcarousel-item-22-horizontal" jcarouselindex="22" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/442/hung.leminh@stu.edu.vn.html"><strong>TS. Lê Minh Hùng</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/442/hung.leminh@stu.edu.vn_1396919931.png" alt="Lê Minh Hùng"><br>
+                    <span class="type-1">Giảng viên</span><br>
+                    <span class="type-2">Khoa Công Nghệ Thực Phẩm</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-23 jcarousel-item-23-horizontal" jcarouselindex="23" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/441/sinh.lehoang@stu.edu.vn.html"><strong>TS. Lê Hoàng Sinh</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/441/sinh.lehoang@stu.edu.vn_1396836451.png" alt="Lê Hoàng Sinh"><br>
+                    <span class="type-1">Phó Khoa</span><br>
+                    <span class="type-2">Khoa Design</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-24 jcarousel-item-24-horizontal" jcarouselindex="24" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/440/phuong.kimpham@stu.edu.vn.html"><strong>TS. Phạm Kim Phương</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/440/phuong.kimpham@stu.edu.vn_1396836409.png" alt="Phạm Kim Phương"><br>
+                    <span class="type-1">Giảng viên</span><br>
+                    <span class="type-2">Khoa Công Nghệ Thực Phẩm</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-25 jcarousel-item-25-horizontal" jcarouselindex="25" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/439/toan.phamnguyenhoangthien@stu.edu.vn.html"><strong>CN. Phạm Nguyễn Hoàng Thiên Toàn</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/439/toan.phamnguyenhoangthien@stu.edu.vn_1396066516.png" alt="Phạm Nguyễn Hoàng Thiên Toàn"><br>
+                    <span class="type-1">Giảng viên</span><br>
+                    <span class="type-2">Khoa Design</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-26 jcarousel-item-26-horizontal" jcarouselindex="26" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/438/Trang.maithithu@stu.edu.vn.html"><strong>ThS. Mai Thị Thu Trang</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/438/Trang.maithithu@stu.edu.vn_1396066546.png" alt="Mai Thị Thu Trang"><br>
+                    <span class="type-1">Giảng viên</span><br>
+                    <span class="type-2">Khoa Quản Trị Kinh Doanh</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-27 jcarousel-item-27-horizontal" jcarouselindex="27" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/437/nha.phanhathanh@stu.edu.vn.html"><strong>ThS. Phan Hà Thanh Nhã</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/437/nha.phanhathanh@stu.edu.vn_1396066455.png" alt="Phan Hà Thanh Nhã"><br>
+                    <span class="type-1">Giảng viên</span><br>
+                    <span class="type-2">Khoa Quản Trị Kinh Doanh</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-28 jcarousel-item-28-horizontal" jcarouselindex="28" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/436/quan.nguyenvu@stu.edu.vn.html"><strong>ThS. Nguyễn Vũ Quân</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/436/quan.nguyenvu@stu.edu.vn_1396066495.png" alt="Nguyễn Vũ Quân"><br>
+                    <span class="type-1">Giảng viên</span><br>
+                    <span class="type-2">Khoa Quản Trị Kinh Doanh</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-29 jcarousel-item-29-horizontal" jcarouselindex="29" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/434/viet.lamhoang@stu.edu.vn.html"><strong>ThS. Lâm Hoàng Việt</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/434/viet.lamhoang@stu.edu.vn_1394499555.png" alt="Lâm Hoàng Việt"><br>
+                    <span class="type-1">Giảng viên</span><br>
+                    <span class="type-2">Khoa Công Nghệ Thông Tin</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-30 jcarousel-item-30-horizontal" jcarouselindex="30" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/432/minh.hathiphuong@stu.edu.vn.html"><strong>ThS. Hà Thị Phương Minh</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/432/minh.hathiphuong@stu.edu.vn_1394499850.png" alt="Hà Thị Phương Minh"><br>
+                    <span class="type-1">Giảng viên</span><br>
+                    <span class="type-2">Khoa Quản Trị Kinh Doanh</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-31 jcarousel-item-31-horizontal" jcarouselindex="31" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/430/hai.tothi@stu.edu.vn.html"><strong>CN. Tô Thị Hải</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/430/hai.tothi@stu.edu.vn_1394499792.png" alt="Tô Thị Hải"><br>
+                    <span class="type-1">Giảng viên</span><br>
+                    <span class="type-2">Khoa Design</span></a>
+                </li>       
+            
+                <li class="jcarousel-item jcarousel-item-horizontal jcarousel-item-32 jcarousel-item-32-horizontal" jcarouselindex="32" style="float: left; list-style: none;">
+                    <a href="http://personnel.stu.edu.vn/vi/chi-tiet/429/lien.huynhthikim@stu.edu.vn.html"><strong>ThS. Huỳnh Thị Kim Liên</strong><br>
+                    <img style="width:88px; height:116px;" src="/uploads/users/429/lien.huynhthikim@stu.edu.vn_1394500240.png" alt="Huỳnh Thị Kim Liên"><br>
+                    <span class="type-1">Giảng viên</span><br>
+                    <span class="type-2">Khoa Quản Trị Kinh Doanh</span></a>
+                </li>       
+            </ul></div><div class="jcarousel-prev jcarousel-prev-horizontal jcarousel-prev-disabled jcarousel-prev-disabled-horizontal" disabled="true" style="display: block;"></div><div class="jcarousel-next jcarousel-next-horizontal" disabled="false" style="display: block;"></div></div></div>
+<script type="text/javascript">
+
+// select box
+jQuery('select.myselectbox').selectbox();
+
+jQuery("#mycarousel").jcarousel();
+
+jQuery(function(){   
+    jQuery("#filterInformation").change(function(){
+        that = this;
+        jQuery.ajax({
+            type: 'post',
+            url: "http://personnel.stu.edu.vn/vi/person/filterCat",
+            data: "id="+jQuery(that).val(),
+            success: function(html){
+                jQuery("#mycarousel").html(html);
+                
+            }
+        });        
+    });
+})
+</script>    
+        
+</div>
+            </div>
+            <iframe frameborder="0" src="http://personnel.stu.edu.vn/tim-kiem.html" style="width:100%; height:1px" id="iframeGSearch" __idm_frm__="4">
+                [Your user agent does not support frames or is currently configured  not to display frames. However, you may visit the related document.]
+            </iframe>
+        </div>
+        <!-- main.end -->
+        <!-- footer -->
+        <div id="footer">
+    <p class="link"><a href="http://stu.edu.vn/" class="first">Trang chủ</a><a href="http://personnel.stu.edu.vn/">Trang chủ nhân sự</a><a href="http://mail.stu.edu.vn">Email</a></p>    <p>© 2011 <strong>Trường Đại học Công Nghệ Sài Gòn</strong>. Liên Hệ: </p>
+    <p>180 Cao Lỗ, Phường 4, Quận 8, TP.HCM. ĐT: (84.8) 3850 5520. Fax: (84.8) 3850 6595.</p>
+    <p>Phòng Quản Lý Khoa Học - Đối Ngoại thiết kế và thực hiện</p>
+</div>
+<script type="text/javascript">
+    jQuery(function(){        
+       jQuery("#footer .link").each(function(){ 
+           jQuery(this).find("a").first().addClass("first"); 
+       });
+    });
+</script>        <!-- footer.end -->
+    </div>
+</div>
+<script type="text/javascript">
+/*<![CDATA[*/
+jQuery(function($) {
+$('#login-form').yiiactiveform({'attributes':[{'id':'LoginForm_username','inputID':'LoginForm_username','errorID':'LoginForm_username_em_','model':'LoginForm','name':'username','enableAjaxValidation':true},{'id':'LoginForm_password','inputID':'LoginForm_password','errorID':'LoginForm_password_em_','model':'LoginForm','name':'password','enableAjaxValidation':true}],'summaryID':'login-form_es_'});
+});
+/*]]>*/
+</script>
+
+
+</body></html>

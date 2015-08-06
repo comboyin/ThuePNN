@@ -1,0 +1,98 @@
+<link href="js_css/stylesheet.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js_css/jquery.min1.js"></script>
+<script type="text/javascript" src="js_css/slideshow1.js"></script>
+<script type="text/javascript" src="js_css/slideshow_init1.js"></script>
+
+<?php include_once "conections/config_pnn.php";?>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0"  bgcolor="#FFFFFF">
+	<tbody>
+	<tr>
+		<td width="15%" align="center"><img src="images/LOGO_THUE.png" width="140px" height="140px"></td>
+		<td width="85%" align="center">
+		<div id="mygallery" class="stepcarousel">
+<div class="belt" style="width: 11200px; left: -7200px;">
+
+                <div class="panel" style="float: none; position: absolute; left: 0px;">	
+
+                    <a href="#"><img src="images/slides/1.jpg" width="800" height="169" border="0"></a>
+
+                </div>	
+
+                <div class="panel" style="float: none; position: absolute; left: 800px;">	
+
+                    <a href="#"><img src="images/slides/2.png" width="800" height="169" border="0"></a>
+
+                </div>
+
+                <div class="panel" style="float: none; position: absolute; left: 1600px;">	
+
+                    <a href="http://luatminhthanh.com"><img src="images/slides/3.jpg" width="800" height="169" border="0"></a>
+
+                </div>		
+                <div class="panel" style="float: none; position: absolute; left: 2400px;">	
+
+                    <a href="http://luatminhthanh.com"><img src="images/slides/4.jpg" width="800" height="169" border="0"></a>
+
+                </div>
+                <div class="panel" style="float: none; position: absolute; left: 3200px;">	
+
+                    <a href="http://luatminhthanh.com"><img src="images/slides/5.jpg" width="800" height="169" border="0"></a>
+
+                </div>					              
+                <div class="panel" style="float: none; position: absolute; left: 4000px;">	
+
+                    <a href="http://luatminhthanh.com"><img src="images/slides/bds6.jpg" width="800" height="169" border="0"></a>
+
+                </div>
+                <div class="panel" style="float: none; position: absolute; left: 4800px;">	
+
+                    <a href="http://luatminhthanh.com"><img src="images/slides/bds7.jpg" width="800" height="169" border="0"></a>
+
+                </div>	
+                <div class="panel" style="float: none; position: absolute; left: 5600px;">	
+
+                    <a href="http://luatminhthanh.com"><img src="images/slides/bds8.jpg" width="800" height="169" border="0"></a>
+
+                </div>		
+                <div class="panel" style="float: none; position: absolute; left: 6400px;">	
+
+                    <a href="http://luatminhthanh.com"><img src="images/slides/bds9.jpg" width="800" height="169" border="0"></a>
+
+                </div>
+                <div class="panel" style="float: none; position: absolute; left: 7200px;">	
+
+                    <a href="http://luatminhthanh.com"><img src="images/slides/bds10.jpg" width="800" height="169" border="0"></a>
+
+                </div>		
+                <div class="panel" style="float: none; position: absolute; left: 8000px;">	
+
+                    <a href="http://luatminhthanh.com"><img src="images/slides/bds11.jpg" width="800" height="169" border="0"></a>
+
+                </div>	     
+                <div class="panel" style="float: none; position: absolute; left: 8800px;">	
+
+                    <a href="http://luatminhthanh.com"><img src="images/slides/bds12.jpg" width="800" height="169" border="0"></a>
+
+                </div>	    
+                <div class="panel" style="float: none; position: absolute; left: 9600px;">	
+
+                    <a href="http://luatminhthanh.com"><img src="images/slides/bds13.jpg" width="800" height="169" border="0"></a>
+
+                </div>	
+                <div class="panel" style="float: none; position: absolute; left: 10400px;">	
+
+                    <a href="http://luatminhthanh.com"><img src="images/slides/bds14.jpg" width="800" height="169" border="0"></a>
+
+                </div>	
+
+            </div>
+</div>
+
+
+
+
+		</td>
+	</tr>
+	</tbody>
+</table>

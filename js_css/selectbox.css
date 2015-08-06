@@ -1,0 +1,125 @@
+div.selectbox-wrapper {
+    position:absolute;
+    left:0px;  
+    margin:0px;
+    top:19px;
+    padding:  0;
+    text-align:left;
+    height:300px;
+    overflow:auto;
+    background:none;
+	z-index:1000;
+	float:left;
+	display:block;
+	z-index:1000;
+}
+.extra-sex .selectbox-wrapper { height:41px; border-bottom:1px solid #b7babc; }
+.extra-title .selectbox-wrapper { height:102px; border-bottom:1px solid #b7babc; }
+.extra-purchase .selectbox-wrapper { height:82px; border-bottom:1px solid #b7babc; }
+div.selectbox-wrapper ul { 
+  list-style-type:none;
+  margin:0 0 0 0;
+  padding:0 0 2px 1px;
+  background:transparent url(../images/bg-select-bottom-right.png) right bottom no-repeat;
+}
+div.selectbox-wrapper ul li.selected { 
+  background-color: #9ad8ff !important;
+}
+div.selectbox-wrapper ul li.current { 
+  background-color: #e9771a !important;
+  border-color:#FFF;
+}
+div.selectbox-wrapper ul li {
+  list-style-type:none; 
+  margin:0;
+  padding:2px !important;
+  background:none !important;
+  cursor:pointer;
+  border-color:#c6eafa;
+  border-style:solid;
+  border-width:0 0 1px 0;
+}
+div.selectbox-wrapper sup { font-size:0.8em; }
+div.selectbox-wrapper ul li.unactive {
+  border:none;
+}
+.form .row .selectbox /* look and fell of  select box*/
+{
+  margin: 0px 5px 0 0px;
+  padding: 4px 0 5px 2px;
+  display : block;
+  text-align:left;   	
+  background: none;
+  cursor: pointer;
+  border:none;
+  z-index:999;  
+}
+.form .row .selectbox:hover { background-image:url(../images/bg-select-hover.gif); }
+.header-selectbox .extra { width:67px;}
+.header-selectbox { height:18px;  background:transparent url(../images/bg-select-header-left.gif) left top no-repeat; padding:0 0 0 3px; position: relative; float:left; margin:5px 3px 0 0; z-index:100; }
+.selectbox-fix-ie7 { position:absolute; z-index:10; }
+.header-selectbox sup { font-size:0.6em; }
+.header-selectbox:hover { background-image:url(../images/bg-select-header-left-hover.gif); }
+.form .row .header-selectbox input { border:none; float:left; z-index:1;  }
+
+
+.header-selectbox-2{ background:url(../images/bg-select-header-2.gif) no-repeat 0px 2px; padding-left: 3px; position: relative; float:left; margin-right:3px; }
+.header-selectbox-3{ background:url(../images/bg-select-header-3.gif) no-repeat 0 0; padding-left: 3px; position: relative; float:left; margin-right:3px; }
+.header-selectbox .selectbox /* look and fell of  select box*/
+{
+  margin: 0px 5px 0 0px;
+  padding: 1px 0 1px 2px;
+  display : block;
+  text-align:left; 
+
+  background: url(../images/bg-select-header-right.gif) right no-repeat;
+  cursor: pointer;
+  border:none;
+}
+
+select {
+	background: none;
+}
+
+.header-selectbox-wapper-1{ background:transparent url(../images/bg-select-top.gif) left top no-repeat;  padding-left:4px; height: 5px; display:none;  }
+.header-selectbox-wapper-2{ background:transparent url(../images/bg-select-top-2.gif) right top no-repeat; padding-top:5px; margin-right:-14px; display:none;}
+.header-selectbox-2 .header-selectbox-wapper-1{ background:transparent url(../images/bg-select-top-extra.gif) left top no-repeat; padding-left:4px; height: 5px; }
+.header-selectbox-2 .header-selectbox-wapper-2{ background:transparent url(../images/bg-select-top-extra-2.gif) right top no-repeat; padding-top:5px;}
+.header-selectbox-2 div.selectbox-wrapper ul li {  }
+.header-selectbox-2 div.selectbox-wrapper ul { 
+  background:transparent url(images/bg-select-bottom-right-2.png) right bottom no-repeat;
+}
+.header-selectbox-2 div.selectbox-wrapper { background:#f8f8f8 url(images/bg-select-bottom-left-2.png) left bottom no-repeat; top:14px; }
+
+.header-selectbox-2 div.selectbox-wrapper ul li, .header-selectbox-3 div.selectbox-wrapper ul li {
+border-color:#919190;
+border-style:solid;
+border-width:0 0 1px;
+cursor:pointer;
+list-style-type:none;
+margin:0;
+padding:2px;
+font-size:12px;
+line-height:12px;
+float:none;
+width:auto;
+}
+.header-selectbox-2 div.selectbox-wrapper ul li.unactive, .header-selectbox-3 div.selectbox-wrapper ul li.unactive {
+  border:none;  
+}
+.header-selectbox-3 .selectbox /* look and fell of  select box*/
+{
+  margin: 0px 5px 0 0px;
+  padding: 0 0 0 2px;
+  display : block;
+  text-align:left; 
+
+  background: url(images/bg-select-3.gif) right no-repeat;
+  cursor: pointer;
+  border:none;
+}
+.header-selectbox-3 input { height:27px; line-height:27px; float:left; }
+.header-selectbox-3 .header-selectbox-wapper-1 { display:none; }
+.header-selectbox-3 div.selectbox-wrapper { background:#f8f8f8 url(images/bg-select-bottom-left-3.gif) left bottom no-repeat; top:27px; }
+.header-selectbox-3 div.selectbox-wrapper ul { background:transparent url(images/bg-select-bottom-right-3.gif) right bottom no-repeat; }
+.header-selectbox-3 div.selectbox-wrapper ul li { line-height:22px; font-size:14px; }

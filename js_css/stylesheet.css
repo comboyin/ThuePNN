@@ -1,0 +1,629 @@
+.h1{
+	FONT-FAMILY: Arial;
+	FONT-SIZE: 30px; 
+	COLOR: #FF6600; 
+	FONT-WEIGHT: bold; 
+	LINE-HEIGHT: 30px;
+	TEXT-DECORATION: none;
+}
+.h2{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 20px; 
+	COLOR: #000000; 
+	FONT-WEIGHT: bold; 
+	LINE-HEIGHT: 25px;
+	TEXT-DECORATION: none;
+}
+.h3{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 15px; 
+	COLOR: #000000; 
+	FONT-WEIGHT: bold; 
+	LINE-HEIGHT: 25px;
+	TEXT-DECORATION: none;
+}
+.h4{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 15px; 
+	COLOR: #000000; 
+	FONT-WEIGHT: normal; 
+	LINE-HEIGHT: 25px;
+	TEXT-DECORATION: none;
+}
+
+.hl{
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 15px; 
+	COLOR: #FFFFFF; 
+	FONT-WEIGHT: bold; 
+	LINE-HEIGHT: 25px;
+	TEXT-DECORATION: none;
+}
+.sub_hl{
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 13px; 
+	COLOR: #FF9900; 
+	FONT-WEIGHT: bold; 
+	LINE-HEIGHT: 25px;
+	TEXT-DECORATION: none
+}
+.big{
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 20px; 
+	COLOR: #000099; 
+	FONT-WEIGHT: bold; 
+	TEXT-DECORATION: none
+}
+.menu_border{
+	background-image:url(images/menu_left2.jpg);
+}
+.button{
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 12px; 
+	FONT-WEIGHT: bold; 
+	COLOR: #FFFFFF; 
+	TEXT-DECORATION: none;
+	background-color:#058382;
+	height:25px;
+	line-height:20px;
+}
+.button:hover{
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 12px; 
+	FONT-WEIGHT: bold; 
+	COLOR: #FFFF00; 
+	TEXT-DECORATION: none;
+	height:25px;
+	line-height:20px;
+}
+.main { color: #fff; font-size: 14px; font-family: "Comic Sans MS", verdana, geneva, arial, sans-serif; }
+.main { color: #fff; font-size: 14px; font-family: "Comic Sans MS", verdana, geneva, arial, sans-serif; }
+
+/* slide show images style*/
+.stepcarousel{
+position: relative; /*leave this value alone*/
+border: 0px solid black;
+overflow: scroll; /*leave this value alone*/
+width: 850px; /*Width of Carousel Viewer itself*/
+height: 169px; /*Height should enough to fit largest content's height*/
+}
+.stepcarousel .belt{
+position: absolute; /*leave this value alone*/
+left: 0;
+top: 0;
+}
+.stepcarousel .panel{
+float: left; /*leave this value alone*/
+overflow: hidden; /*clip content that go outside dimensions of holding panel DIV*/
+margin: 0px; /*margin around each panel*/
+width: 850px; /*Width of each panel holding each content. If removed, widths should be individually defined on each content DIV then. */
+}
+/* Suft slide*/
+#slideads{
+	position: relative;
+	visibility: hidden;
+	z-index:100;
+	}
+#slideads1{
+	float:left;
+	margin: 0px;
+}
+#slideads2{
+	float:right;
+	margin: 0px;
+}
+.title{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11px;
+	FONT-WEIGHT: bold; 
+	COLOR: #000000;
+	TEXT-DECORATION: none;
+	line-height:18px;
+}
+.tal, tal a{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 12px; 
+	FONT-WEIGHT: bold; 
+	COLOR: #FFFFFF; 
+	TEXT-DECORATION: none;
+	padding-left:9px;
+	padding-right:9px;
+}
+.tal a:hover{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 12px; 
+	FONT-WEIGHT: bold; 
+	COLOR: #FFFF00; 
+	TEXT-DECORATION: none;	
+}
+.talbar, talbar a{
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 11px; 
+	FONT-WEIGHT: bold; 
+	COLOR: #000000; 
+	TEXT-DECORATION: none;
+	padding-right:10px;
+}
+.talbar a:hover{
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 11px; 
+	FONT-WEIGHT: bold; 
+	COLOR: #FF5500; 
+	TEXT-DECORATION: none;
+}
+.menu_p, menu_p a{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 12px; 
+	FONT-WEIGHT: bold; 	 
+	text-transform:uppercase;
+	padding:5px;
+	COLOR: #FFFF00; 
+	TEXT-DECORATION: none;
+}
+.menu_p a:hover{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 12px; 
+	FONT-WEIGHT: bold; 
+	text-transform:uppercase;
+	COLOR: #FFFFFF; 
+	TEXT-DECORATION: none;
+}
+.menu_c{
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 12px; 
+	FONT-WEIGHT: normal; 
+	COLOR: #000000; 
+	TEXT-DECORATION: none;
+}
+.menu_c:hover{
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 12px; 
+	FONT-WEIGHT: normal; 
+	COLOR: #FF0000; 
+	TEXT-DECORATION: none;
+}
+.menu_b{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 12px; 
+	FONT-WEIGHT: bold; 
+	COLOR: #FFCC00; 
+	TEXT-DECORATION: none;
+	line-height:25px;
+
+}
+.menu_b:hover{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 12px; 
+	FONT-WEIGHT: bold; 
+	COLOR: #333333; 
+	TEXT-DECORATION: none;
+	line-height:25px;
+}
+.menu_r, menu_r a{
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 11px; 
+	FONT-WEIGHT: bold; 
+	COLOR: #333333; 
+	TEXT-DECORATION: none;
+	line-height:15px;
+
+}
+.menu_r a:hover{
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 11px; 
+	FONT-WEIGHT: bold; 
+	COLOR: #FF0000;
+	line-height:15px;
+}
+.menu_b_2{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 12px; 
+	FONT-WEIGHT: bold; 
+	COLOR: #222222; 
+	TEXT-DECORATION: none;
+	line-height:25px;
+
+}
+.menu_b_2:hover{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 12px; 
+	FONT-WEIGHT: bold; 
+	COLOR: #CCCCCC; 
+	TEXT-DECORATION: none;
+	line-height:25px;
+}
+.td_b{
+	border:solid 1px #007700;
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 12px;
+	COLOR: #333333;
+	TEXT-DECORATION: none;
+	border-spacing:2px;
+}
+.search_b{
+	border-bottom:solid 1px #007700;
+	border-left:solid 1px #007700;
+	border-right:solid 1px #007700;
+	FONT-SIZE: 12px;
+	COLOR: #333333;
+	TEXT-DECORATION: none;
+	border-spacing:2px;
+}
+.more, more a{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11px; 
+	COLOR: #FF5500; 
+	TEXT-DECORATION: none;
+	line-height:18px;
+}
+.more a:hover{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11px; 
+	COLOR: #FF0000; 
+	TEXT-DECORATION: underline;
+	line-height:18px;
+}
+.content_title{
+	font-family: "Comic Sans MS", verdana, geneva, arial, sans-serif;
+	FONT-SIZE: 18px; 
+	FONT-WEIGHT: bold; 
+	COLOR: #FF0000; 
+	TEXT-DECORATION: none;
+	line-height: 22px;
+}
+.content_tour{
+	font-family: "Comic Sans MS", verdana, geneva, arial, sans-serif;
+	FONT-SIZE: 16px; 
+	FONT-WEIGHT: bold; 
+	COLOR: #FF0000; 
+	TEXT-DECORATION: none;
+	line-height: 22px;
+}
+.content{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 12px;
+	COLOR: #000000;
+	TEXT-DECORATION: none;
+	line-height: 18px;
+}
+.content_l{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 12px;
+	COLOR: #333333;
+	TEXT-DECORATION: none;
+	line-height: 18px;
+}
+.content_m, content_m a{
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 12px;
+	COLOR: #000000;
+	TEXT-DECORATION: none;
+}
+.content_m a:hover{
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 12px;
+	COLOR: #FF0000;
+	TEXT-DECORATION: underline;
+}
+
+.content_s, content_s a{
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 12px;
+	COLOR: #000000;
+	TEXT-DECORATION: none;
+}
+.content_s a:hover{
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 12px;
+	COLOR: #FF0000;
+	TEXT-DECORATION: underline;
+}
+
+.content_n{
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 11px;
+	COLOR: #000000;
+	TEXT-DECORATION: none;
+}
+.content_b{
+	border-top:dashed 1px #333333;
+	border-bottom:dashed 1px #333333;
+	border-left:dashed 1px #333333;
+	border-right:dashed 1px #333333;
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 12px;
+	COLOR: #333333;
+	TEXT-DECORATION: none;
+	border-spacing:2px;
+}
+
+.content_f{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11px;
+	COLOR: #000033;
+	TEXT-DECORATION: none;
+
+}
+.content_f:hover{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11px; 
+	COLOR: #ff0000; 
+	TEXT-DECORATION: underline;
+}
+.content_v, content_v a{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11px;
+	COLOR: #FF6600;
+	TEXT-DECORATION: none;
+	font-weight:bold;
+	line-height: 20px;
+}
+.content_v a:hover{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11px; 
+	COLOR: #333333; 	
+	font-weight:bold;
+	TEXT-DECORATION: none;	
+}
+.content_i{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11px; 
+	COLOR: #333333; 
+	TEXT-DECORATION: none
+}
+.demo{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11px; 
+	COLOR: #333333; 
+	TEXT-DECORATION: none;
+}
+.detail_b{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11.5px; 
+	COLOR: #336699; 
+	TEXT-DECORATION: none
+}
+.detail_b:hover{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11.5px; 
+	COLOR: #336699; 
+	TEXT-DECORATION: underline;
+}
+.detail_r, detail_r a{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 10px; 
+	COLOR: #FF0000; 
+	TEXT-DECORATION: none
+}
+.detail_r a:hover{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 10px; 
+	COLOR: #FF0000; 
+	TEXT-DECORATION: underline;
+}
+.paging{	
+	padding:3px;
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 13px; 
+	FONT-WEIGHT: bold; 
+	COLOR: #ffff00; 
+	background-color:#058382;
+	TEXT-DECORATION: none;
+}
+.paging a{	
+	padding:3px;
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 13px; 
+	FONT-WEIGHT: bold; 
+	COLOR: #ffff00; 
+	background-color:#007700;
+	TEXT-DECORATION: none;
+}
+.paging:hover{
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 13px; 
+	FONT-WEIGHT: bold; 
+	COLOR: #FFFFFF; 
+	background-color:#1075bd;
+	TEXT-DECORATION: none;
+}
+.footer{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11px; 
+	COLOR: #000000; 
+	TEXT-DECORATION: none
+	line-height: 22px;
+}
+.foot, foot a{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11px; 
+	COLOR: #000000; 
+	TEXT-DECORATION: none;
+	line-height:20px;
+}
+.foot a:hover{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11px; 
+	COLOR: #FF0000; 
+	TEXT-DECORATION: underline;
+	line-height:20px;
+}
+.date{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11px;
+	COLOR: #FFFFFF;
+	TEXT-DECORATION: none;
+	line-height:20px;
+}
+.marquee_sim{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11px; 
+	font-weight:bold;
+	COLOR: #CCCCCC; 
+	TEXT-DECORATION: none;
+}
+.marquee_sim:hover{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11px; 
+	font-weight:bold;
+	COLOR: #FFFFFF;
+	TEXT-DECORATION: none;
+}
+.marquee_gia{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11px; 
+	COLOR: #CCCCCC; 
+	TEXT-DECORATION: none;
+}
+.marquee{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11px; 
+	COLOR: #BBBBBB; 
+	TEXT-DECORATION: none;
+}
+.marquee:hover{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11px; 
+	COLOR: #FFFFFF; 
+	TEXT-DECORATION: none;
+}
+.footer_b{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11px; 
+	COLOR: #000000; 
+	TEXT-DECORATION: none;
+	line-height:18px;
+}
+.footerlink{
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 11px; 
+	FONT-WEIGHT: normal; 
+	COLOR: #FFFFFF; 
+	TEXT-DECORATION: none
+}
+
+.footerlink:hover{
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 11px; 
+	FONT-WEIGHT: normal; 
+	COLOR: #000066; 
+	TEXT-DECORATION: underline
+}
+.click{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 13px; 
+	COLOR: #FF0000; 
+	FONT-WEIGHT: bold; 
+	TEXT-DECORATION: underline;
+}
+.click:hover{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 13px; 
+	COLOR: #FF0000; 
+	FONT-WEIGHT: bold; 
+	TEXT-DECORATION: underline;
+}
+.click1{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11px; 
+	COLOR: #386087; 
+	FONT-WEIGHT: normal;
+	TEXT-DECORATION: none; 
+}
+.click1:hover{
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11px; 
+	COLOR: #386087; 	
+	TEXT-DECORATION: underline;
+}
+
+.content_new{ 
+	color: #000033; 
+	font-size: 18px; 
+	font-family: "Comic Sans MS", verdana, geneva, arial, sans-serif; 
+	font-style: italic; 
+	word-spacing: 1px; 
+	letter-spacing: 1px; 
+}
+.content_new1{ 
+	color: #000033; 
+	font-size: 15px; 
+	font-family: "Comic Sans MS", verdana, geneva, arial, sans-serif; 
+	font-style: italic; 
+	word-spacing: 1px; 
+	letter-spacing: 1px; 
+}
+.main { color: #fff; font-size: 14px; font-family: "Comic Sans MS", verdana, geneva, arial, sans-serif; }
+
+/* menu styles */
+.menus{
+	margin: 0;
+	padding: 0;
+	width: 180px; /*width of menu*/
+	border-bottom-width: 0;
+}
+.menus a.menu{
+	width: auto;
+	height:25px;
+	/*background-image: url(images/index_13.gif);*/
+	border-bottom: 1px dotted #007700;
+	background-color: #428484;/*#039cfd;*/
+	padding-left: 25px;
+	valign:middle;
+	FONT-FAMILY: Tahoma;
+	FONT-SIZE: 12px; 
+	FONT-WEIGHT: bold; 
+	COLOR: #FFFFFF; 
+	TEXT-DECORATION: none;
+	display: block;
+	line-height:25px;
+}
+.menus a.menu:visited, .menus .menu:active{
+}
+
+.menus a.menu .statusicon{ /*CSS for icon image that gets dynamically added to headers*/
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	border: none;
+}
+
+.menus a.menu:hover{
+	/*background-image: url(images/index_13_bg.gif);*/
+	background-color:#FFFFFF;
+	color:#000000;
+	
+}
+
+.menus div.submenu{ /*DIV that contains each sub menu*/
+	/*background-image: url(images/index_21.gif);	*/
+}
+
+.menus div.submenu ul{ /*UL of each sub menu*/
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menus div.submenu ul li{
+	/*background-image: url(images/index_21.gif);	*/
+	background-color:#EEEEEE;
+	height: 26px;
+}
+
+.menus div.submenu ul li a{
+	padding-left: 25px;
+	display: block;
+	FONT-FAMILY: Verdana;
+	FONT-SIZE: 11px; 
+	FONT-WEIGHT: normal; 
+	COLOR: #000000; 
+	TEXT-DECORATION: none;
+	line-height:26px;
+}
+
+.menus div.submenu ul li a:hover{
+	/*background-image: url(images/index_21_bg.gif);*/
+	background-color:#FFFFFF;
+	COLOR: #FF0000; 
+}
