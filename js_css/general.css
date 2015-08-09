@@ -19,7 +19,7 @@ a { cursor:pointer; }
 #header .language li.vietnamese { background-image: url(../images/ico-vietnamese.gif); }
 #header .language li.english { background-image: url(../images/ico-english.gif); margin-right: 0; }
 /* menu */
-#header #menu { float: left; padding-top: 8px; width: 1002px; }
+#header #menu { float: left; padding-top: 8px; width: 1002px;margin-left: 0px; }
 #header #menu li { background: url(../images/bg-menu.gif) repeat-x; float: left; font-size: 1.1em; margin-right: 1px; line-height: 47px; position: relative; z-index: 1000;}
 #header #menu li a { background: url(../images/bg-menu-left.gif) no-repeat; display: block; float: left; padding: 0 19px; }
 #header #menu li a span { cursor: pointer; display: block; float: left; }
