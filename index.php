@@ -3,6 +3,9 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<script type="text/javascript" src="js_css/jquery-1.8.3.min.js"></script>
+
+	
+	
 	<script type="text/javascript" src="js_css/jquery.yiiactiveform.js"></script>
 	<script type="text/javascript" src="js_css/bootstrap.js"></script>
 	<script type="text/javascript" src="js_css/jquery.yiiactiveform.js"></script>
@@ -23,7 +26,24 @@
 	<link href="js_css/skin.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="js_css/jquery-ui.js"></script>
 	<link href="js_css/jquery-ui.css" rel="stylesheet" type="text/css">
+	
+	<!--BEGIN Nếu rt == 'HoSo' thì load các file css và js này  -->
+	<?php if(isset($_GET['rt']) && $_GET['rt']=='HoSo'):?>
 
+   
+	
+    <link rel="stylesheet" href="js_css/jpage/css/jPages.css">
+    <link rel="stylesheet" href="js_css/jpage/css/animate.css">
+    <link rel="stylesheet" href="js_css/hoso.css">
+    <link rel="stylesheet" href="js_css/Magnific-Popup/dist/magnific-popup.css">
+    
+    <script type="text/javascript" src="js_css/jpage/js/highlight.pack.js"></script>
+    <script type="text/javascript" src="js_css/jpage/js/tabifier.js"></script>
+    <script type="text/javascript" src="js_css/jpage/js/js.js"></script>
+    <script src="js_css/jpage/js/jPages.js"></script>
+    <script src="js_css/Magnific-Popup/dist/jquery.magnific-popup.js"></script>
+    
+    <?php endif;?>
 	<!--[if lt IE 7]>
 	<script type="text/javascript" src="/themes/classic/js/DD_belatedPNG.js"></script>
 	<![endif]-->
@@ -41,6 +61,7 @@
         <style>
 			#header .date-search .search .btn { width:44px; }
 			#header .date-search .search .text { width: 153px; }
+           
 		</style>
 		<div id="header">
 			<?php require_once('source/slides.php');?>

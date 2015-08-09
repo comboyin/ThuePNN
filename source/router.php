@@ -9,7 +9,7 @@ if($rt=='NhatKy'){
     require_once 'source/NhatKyView.php';
 }
 else if($rt=='HoSo'){
-    require_once '';
+    require_once 'source/HoSoView.php';
 }
 else if($rt=='DanhBa')
 {
