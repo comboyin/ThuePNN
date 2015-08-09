@@ -4,8 +4,12 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<script type="text/javascript" src="js_css/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="js_css/jquery.yiiactiveform.js"></script>
+	<script type="text/javascript" src="js_css/bootstrap.js"></script>
+	<script type="text/javascript" src="js_css/jquery.yiiactiveform.js"></script>
+	
 	<script type="text/javascript" src="js_css/jquery.dataTables.js"></script>
 	<script type="text/javascript" src="js_css/DT_bootstrap.js"></script>
+	<script type="text/javascript" src="js_css/MyLib.js"></script>
 	<title>TRA CỨU TỜ KHAI THUẾ PNN</title>
 	<link href="js_css/reset.css" rel="stylesheet" type="text/css">
 	<link href="js_css/general.css" rel="stylesheet" type="text/css">
@@ -13,6 +17,12 @@
 	<script type="text/javascript" src="js_css/jquery.jcarousel.min.js"></script>    
 	<script type="text/javascript" src="js_css/extras.js"></script>
 	<link href="js_css/skin.css" rel="stylesheet" type="text/css">
+	<link href="js_css/bootstrap.css" rel="stylesheet" type="text/css">
+	
+	<!-- jquery ui  -->
+	<link href="js_css/skin.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="js_css/jquery-ui.js"></script>
+	<link href="js_css/jquery-ui.css" rel="stylesheet" type="text/css">
 
 	<!--[if lt IE 7]>
 	<script type="text/javascript" src="/themes/classic/js/DD_belatedPNG.js"></script>
