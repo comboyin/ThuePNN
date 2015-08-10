@@ -67,14 +67,8 @@ var hoso = function() {
 				
 				
 			}
-			
-			
-			
-			
+
 			function Them(){
-				
-				
-				
 				var fd = new FormData();
 				
 				fd.append('fileToUpload',
@@ -425,10 +419,12 @@ var hoso = function() {
 									$('img.loadingNNT').css('display',
 											'none');
 									count = json['count'];
-
+									$('span.TenGoi').html(
+											json['TenGoi']);
+									$('span.DiaChi').html(
+											json['DiaChi']);
 									if (count > 0) {
-										$('span.TenGoi').html(
-												json['TenGoi']);
+										
 										$("#ContentHoSo").html(
 												json['Content']);
 										initJpage();

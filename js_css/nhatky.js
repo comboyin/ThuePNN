@@ -8,6 +8,87 @@ var nhatky = function () {
 	var tableNhatKy
 	return {
 		init : function () {
+			
+			
+			function LoadDanhSachMST(MaSoThue){
+
+				$("img.loading").css('display','inline');
+				
+				
+
+				data = {
+						Action : 'LoadDanhSachMST',
+						MaSoThue : MaSoThue
+				}
+				
+				$.get(baseUrl('source/NhatKyController.php'),data,function(json){
+					deleteAllRows();
+					tengoi = json['TenGoi'];
+					diachi = json['DiaChi'];
+					
+					$("span.TenGoi").html(tengoi);
+					$("span.DiaChi").html(diachi);
+					
+					DATA = json['data'];
+					for (i = 0; i < DATA.length; i++) {
+						date =  DATA[i]['ngay'].split(" ")[0];
+						ngay = date.split('-')[2];
+						thang = date.split('-')[1];
+						nam = date.split('-')[0];
+						
+						StringDate = ngay+'-'+thang+'-'+nam;
+						
+						tableNhatKy
+						.fnAddData([
+								DATA[i]['id'],
+								DATA[i]['masothue'],
+								DATA[i]['tengoi'],
+								StringDate,
+								DATA[i]['noidung'],
+								DATA[i]['trangthai'],
+								'<a class="edit" href="">Edit</a>',
+								'<a class="delete" href="">Delete</a>',
+								]);
+						
+					}
+
+					$("img.loading").css('display','none');
+	
+				},'json');
+			}
+			
+			
+			$("input[name='MaSoThueLoad']").on( "keyup", function(e){
+				var MaSoThue = $("input[name='MaSoThueLoad']").val();
+				
+				LoadDanhSachMST(MaSoThue);
+			} );
+			
+			$("input[name='MaSoThueLoad']").on( "blur", function(e){
+				var MaSoThue = $("input[name='MaSoThueLoad']").val();
+				LoadDanhSachMST(MaSoThue);
+			} );
+			
+			$("input[name='NgayBD']").datepicker({
+				dateFormat : 'dd-mm-yy',
+				beforeShow: function (textbox, instance) {
+		            instance.dpDiv.css({
+		                    marginTop: (-textbox.offsetHeight) + 'px',
+		                    marginLeft: textbox.offsetWidth + 'px'
+		            });
+				}
+			});
+			
+			$("input[name='NgayKT']").datepicker({
+				dateFormat : 'dd-mm-yy'
+			});
+			
+			$("input[name='Ngay']").datepicker({
+				dateFormat : 'dd-mm-yy'
+			});
+			
+			
+			
 			// even them 
 			$("button.SubmitThem").click(function(e){
 				e.preventDefault();

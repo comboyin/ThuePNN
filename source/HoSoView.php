@@ -5,7 +5,7 @@
 <h2 class="ThongBao"></h2>
 <form class="form-horizontal">
 	<div class="control-group">
-		<label class="control-label">Mã Số Thuế (*)</label>
+		<label class="control-label">Mã Số Thuế:</label>
 		<div class="controls input-icon">
 			<input type="text" name="MaSoThue" style="height: 30px;"> <span
 				style="display: none" class="input-success tooltips check_"> <i
@@ -19,6 +19,14 @@
 		<div class="controls input-icon">
 			<img class="loadingNNT" style="margin-left: 10px; display: none;"
 				src="images/ajax-loader.gif"> <span class='TenGoi'></span>
+
+		</div>
+	</div>
+	
+	<div class="control-group">
+		<label class="control-label">Địa chỉ: </label>
+		<div class="controls input-icon">
+			<span class='DiaChi'></span>
 
 		</div>
 	</div>

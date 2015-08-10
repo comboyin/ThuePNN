@@ -16,9 +16,16 @@ if ($Action == 'LoadHS_MST') {
     $MaSoThue = $_GET['MaSoThue'];
     $sql_danhba = "select * from danhba where danhba.masothue = '$MaSoThue'";
     $rs_danhba = mysql_query($sql_danhba);
+    $kq = [];
+    $kq['TenGoi'] = '';
+    $kq['DiaChi'] = '';
     $iddanhba = 0;
     if (mysql_num_rows($rs_danhba) == 1) {
-        $iddanhba = mysql_fetch_array($rs_danhba)['iddanhba'];
+        $teamp = mysql_fetch_array($rs_danhba);
+        $iddanhba = $teamp['iddanhba'];
+        $kq['TenGoi'] = $teamp['tengoi'];
+        $kq['DiaChi'] = $teamp['sonha']." ".$teamp['tenduong'];
+        
     }
     // nếu tìm thấy MaSoThue
     if ($iddanhba != 0) {
@@ -43,11 +50,8 @@ if ($Action == 'LoadHS_MST') {
         $Content .= '</a></li> ';
         }
     }
-    $kq = [];
     $kq['count'] = count($Rows);
     if (count($Rows) > 0) {
-        
-        $kq['TenGoi'] = $Rows[0]['tengoi'];
         $kq['Content'] = $Content;
     }
     

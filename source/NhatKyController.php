@@ -1,5 +1,11 @@
 <?php
-$Action = isset($_GET['Action'])?$_GET['Action']:'';
+$Action = '';
+if (isset($_GET['Action'])) {
+    $Action = $_GET['Action'];
+}
+if (isset($_POST['Action'])) {
+    $Action = $_POST['Action'];
+}
 include_once "../conections/config_pnn.php";
 include_once '../source/Unlity.php';
 if ($Action == 'LoadDanhSach') {
@@ -32,6 +38,42 @@ if ($Action == 'LoadDanhSach') {
     
     
     
+}elseif($Action == 'LoadDanhSachMST'){
+   
+        //error_reporting(0);
+       
+        $MaSoThue = $_GET['MaSoThue'];
+        
+        
+        // tim danh bạ
+        $sql_danhba = "select * from danhba where danhba.masothue = '$MaSoThue'";
+        $rs_danhba = mysql_query($sql_danhba);
+        $kq = [];
+        $kq['TenGoi'] = '';
+        $kq['DiaChi'] = '';
+        $iddanhba = 0;
+        if (mysql_num_rows($rs_danhba) >= 1) {
+            $teamp = mysql_fetch_array($rs_danhba);
+            $kq['TenGoi'] = $teamp['tengoi'];
+            $kq['DiaChi'] = $teamp['sonha']." ".$teamp['tenduong'];
+        }
+        
+        
+        
+        
+        
+
+        $sql = "select * from nhatky left join danhba
+        on nhatky.iddanhba = danhba.iddanhba
+        where danhba.masothue = '$MaSoThue'";
+
+        $queryParent = mysql_query($sql);
+        $rows = array();
+        while($r = mysql_fetch_assoc($queryParent)) {
+            $rows[] = $r;
+        }
+        $kq['data'] = $rows;
+        echo json_encode($kq);
 } elseif ($_POST['Action'] == 'Them' ) {
     error_reporting(0);
     $MaSoThue =$_POST['MaSoThue'] ;

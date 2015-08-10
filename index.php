@@ -16,6 +16,9 @@
 	<title>TRA CỨU TỜ KHAI THUẾ PNN</title>
 	<link href="js_css/reset.css" rel="stylesheet" type="text/css">
 	<link href="js_css/general.css" rel="stylesheet" type="text/css">
+	
+
+	
 		
 	<script type="text/javascript" src="js_css/jquery.jcarousel.min.js"></script>    
 	<script type="text/javascript" src="js_css/extras.js"></script>
@@ -29,9 +32,6 @@
 	
 	<!--BEGIN Nếu rt == 'HoSo' thì load các file css và js này  -->
 	<?php if(isset($_GET['rt']) && $_GET['rt']=='HoSo'):?>
-
-   
-	
     <link rel="stylesheet" href="js_css/jpage/css/jPages.css">
     <link rel="stylesheet" href="js_css/jpage/css/animate.css">
     <link rel="stylesheet" href="js_css/hoso.css">
@@ -42,7 +42,6 @@
     <script type="text/javascript" src="js_css/jpage/js/js.js"></script>
     <script src="js_css/jpage/js/jPages.js"></script>
     <script src="js_css/Magnific-Popup/dist/jquery.magnific-popup.js"></script>
-    
     <?php endif;?>
 	<!--[if lt IE 7]>
 	<script type="text/javascript" src="/themes/classic/js/DD_belatedPNG.js"></script>

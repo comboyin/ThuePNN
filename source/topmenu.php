@@ -8,7 +8,7 @@
 	    while($pr = mysql_fetch_array($queryParent))
     	{
 	?>            
-		<li><a href="<?php echo $pr["linkMenu"];?>" class="<?php echo $pr["iclass"];?>"><span><?php echo $pr['titleMenu']; ?></span></a>
+		<li class="item"><a href="<?php echo $pr["linkMenu"];?>" class="<?php echo $pr["iclass"];?>"><span><?php echo $pr['titleMenu']; ?></span></a>
 			<?php
 				// Trong mỗi menu cha, ta lại tìm menu con để lặp
 				$sql="SELECT * FROM menu WHERE isPublished = '1' and isParent = '2' and id_parent = '".$pr['idMenu']."' order by 'thutu' ASC ";
