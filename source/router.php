@@ -13,7 +13,7 @@ else if($rt=='HoSo'){
 }
 else if($rt=='DanhBa')
 {
-    require_once '';
+    require_once 'source/DanhBaView.php';
 }else {
     require_once 'source/TrangChu.php';
 }

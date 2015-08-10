@@ -50,20 +50,20 @@ if ($Action == 'LoadDanhSach') {
         $rows[] = $r;
     }
 
-    $sql_ThemNhatKy='';
+    $sql_SuaDanhBa='';
     
     // Neu tim thay MaSoThue ở danh bạ
     if(count($rows)==0){
-        $sql_ThemNhatKy = "insert into nhatky(iddanhba,ngay,noidung,trangthai) values(null,'$Ngay','$NoiDung',$TrangThai)";
+        $sql_SuaDanhBa = "insert into nhatky(iddanhba,ngay,noidung,trangthai) values(null,'$Ngay','$NoiDung',$TrangThai)";
     }
     // Nếu không tìm thấy => set Null field iddanhba
     else {
         $iddanhba = $rows[0]['iddanhba'];
-        $sql_ThemNhatKy = "insert into nhatky(iddanhba,ngay,noidung,trangthai) values('$iddanhba','$Ngay','$NoiDung',$TrangThai)";
+        $sql_SuaDanhBa = "insert into nhatky(iddanhba,ngay,noidung,trangthai) values('$iddanhba','$Ngay','$NoiDung',$TrangThai)";
     }
     
     
-    $queryParent = mysql_query($sql_ThemNhatKy);
+    $queryParent = mysql_query($sql_SuaDanhBa);
     $rows = [];
     $rows[] = $queryParent;
     echo json_encode($rows);
@@ -98,7 +98,7 @@ if ($Action == 'LoadDanhSach') {
         $rows[] = $r;
     }
     
-    $sql_ThemNhatKy='';
+    $sql_SuaDanhBa='';
     
     // Neu tim thay MaSoThue ở danh bạ
     if(count($rows)==0){
