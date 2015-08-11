@@ -8,7 +8,7 @@
 <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
 	<tbody>
 	<tr>
-		<td width="15%" align="center"><img src="images/LOGO_THUE.png" width="140px" height="140px"></td>
+		<td width="15%" align="center" bgcolor="#FFFFFF"><img src="images/LOGO_THUE.png" width="140px" height="140px"></td>
 		<td width="85%%" align="center">
 			<div id="mygallery" class="stepcarousel">
 				<div class="belt">

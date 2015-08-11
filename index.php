@@ -2,9 +2,7 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<script type="text/javascript" src="js_css/jquery-1.8.3.min.js"></script>
-
-	
+	<script type="text/javascript" src="js_css/jquery-1.8.3.min.js"></script>	
 	
 	<script type="text/javascript" src="js_css/jquery.yiiactiveform.js"></script>
 	<script type="text/javascript" src="js_css/bootstrap.js"></script>
@@ -32,6 +30,15 @@
 	
 	<!--BEGIN Nếu rt == 'HoSo' thì load các file css và js này  -->
 	<?php if(isset($_GET['rt']) && $_GET['rt']=='HoSo'):?>
+	<!--BEGIN file tree  -->
+	
+		<script src="js_css/FileTree/jquery.easing.js"></script>
+			<script src="js_css/FileTree/jqueryFileTree.js"></script>
+	<link rel="stylesheet" href="js_css/FileTree/jqueryFileTree.css">
+
+
+	<!--END file tree  -->
+	
     <link rel="stylesheet" href="js_css/jpage/css/jPages.css">
     <link rel="stylesheet" href="js_css/jpage/css/animate.css">
     <link rel="stylesheet" href="js_css/hoso.css">
@@ -43,6 +50,8 @@
     <script src="js_css/jpage/js/jPages.js"></script>
     <script src="js_css/Magnific-Popup/dist/jquery.magnific-popup.js"></script>
     <?php endif;?>
+    
+    
 	<!--[if lt IE 7]>
 	<script type="text/javascript" src="/themes/classic/js/DD_belatedPNG.js"></script>
 	<![endif]-->
@@ -51,43 +60,71 @@
 		#header #menu li a { padding: 0 16px; }
 	</style>
 	<![endif]-->
+	<?php
+		function sw_get_current_weekday() {
+			date_default_timezone_set('Asia/Ho_Chi_Minh');
+			$weekday = date("l");
+			$weekday = strtolower($weekday);
+			switch($weekday) {
+				case 'monday':
+					$weekday = 'Thứ hai';
+					break;
+				case 'tuesday':
+					$weekday = 'Thứ ba';
+					break;
+				case 'wednesday':
+					$weekday = 'Thứ tư';
+					break;
+				case 'thursday':
+					$weekday = 'Thứ năm';
+					break;
+				case 'friday':
+					$weekday = 'Thứ sáu';
+					break;
+				case 'saturday':
+					$weekday = 'Thứ bảy';
+					break;
+				default:
+					$weekday = 'Chủ nhật';
+					break;
+			}
+			
+			return $weekday.', '.date('d - m - Y, H:i:s');
+		}
+	?>	
 </head>
 
-<body>
-<div id="container">
-    <div class="container-wrapper">
-        <!-- header -->
-        <style>
-			#header .date-search .search .btn { width:44px; }
-			#header .date-search .search .text { width: 153px; }
-           
-		</style>
-		<div id="header">
-			<?php require_once('source/slides.php');?>
-			<?php require_once('source/topmenu.php');?>
-							
-			<div class="date-search">
-				<p>Thứ năm, 30 - 07 - 2015,  11:15, GMT+7</p>
-				<p class="welcome" style="text-transform: uppercase">CHI CỤC THUẾ QUẬN 5 - ĐỘI THUẾ LIÊN PHƯỜNG 5</p>
-			</div>
+<body id="container">
+		<div class="container-wrapper">
+			<!-- header -->
+			<div id="header">
+				<?php require_once('source/slides.php');?>
+				<?php require_once('source/topmenu.php');?>
+								
+				<div class="date-search">
+					<p><?php echo sw_get_current_weekday(); ?></p>
+					<p class="welcome" style="text-transform: uppercase">CHI CỤC THUẾ QUẬN 5 - ĐỘI THUẾ LIÊN PHƯỜNG 5</p>
+				</div>
+				
+			</div>		
+			<!-- header.end -->
+			-
 			
-		</div>		
-        <!-- header.end -->
-        -
-        
-        <!-- main -->
-        <div id="main">
-            <div id="main-content-web">
-                    <?php include 'source/router.php';?>
-            
-            </div>
-        </div>
-            <iframe frameborder="0" src="http://personnel.stu.edu.vn/tim-kiem.html" style="width:100%; height:1px" id="iframeGSearch" __idm_frm__="4">
-                [Your user agent does not support frames or is currently configured  not to display frames. However, you may visit the related document.]
-            </iframe>
-        </div>
-<!-- main.end -->
-<!-- footer -->
-<?php include_once 'source/footer.php';?>
+			<!-- main -->
+			<div id="main">
+				<div id="main-content-web">
+						<?php include 'source/router.php';?>            
+				</div>
+			</div>	
 
-</body></html>
+		</div>
+			<!-- main.end -->
+	
+
+	<!-- footer -->
+	<div id="footer">
+		<?php include_once 'source/footer.php';?>
+	</div>	
+
+</body>
+</html>

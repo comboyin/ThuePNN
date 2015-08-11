@@ -1,6 +1,5 @@
 /* common */
-body { background: #3398cc url(../images/bg-footer.gif) repeat-x left bottom; text-align: center; }
-#container { background: url(../images/bg-header.gif) repeat-x; }
+#container { background: url(../images/bg-header.png) repeat-x; background-color: #3398cc;}
 #container .container-wrapper { font-size: .85em; margin: 0 auto; text-align: left; width: 1002px; }
 a { cursor:pointer; }
 .clear-fix, .content-aside .form .input { overflow: hidden; }
@@ -14,10 +13,6 @@ a { cursor:pointer; }
 #header .logo { float: left; margin-right: 30px; position:absolute; top:30; left:0; max-width=200%}
 #header .text-1 { background: url(../images/bg-CNSG.png) no-repeat; float: left; height: 42px; margin-top: 40px; margin-left:237px; margin-right: 10px; text-indent: -1984em; width: 525px; }
 #header .text-2 { background: url(../images/bg-text.png) no-repeat; float: right; height: 47px; text-indent: -1984em; width: 253px; }
-#header .language { float: left; padding: 10px 0 40px 45px; }
-#header .language li { background: no-repeat center top; float: left; font-size: .9em; margin-right: 20px; padding-top: 23px; text-align: center; }
-#header .language li.vietnamese { background-image: url(../images/ico-vietnamese.gif); }
-#header .language li.english { background-image: url(../images/ico-english.gif); margin-right: 0; }
 /* menu */
 #header #menu { float: left; padding-top: 8px; width: 1002px;margin-left: 0px; }
 #header #menu li { background: url(../images/bg-menu.gif) repeat-x; float: left; font-size: 1.1em; margin-right: 1px; line-height: 47px; position: relative; z-index: 1000;}
@@ -49,21 +44,56 @@ a { cursor:pointer; }
 #header .date-search .search .btn  { background: url(../images/bg-btn-search.gif) no-repeat; color: #fff; cursor: pointer; padding: 5px 2px 2px 15px; width: 60px; }
 
 /* footer */
-#footer { color: #fff; font-size: 1.1em; padding: 30px 20px; text-align: center; }
-#footer p { margin-top: 7px; }
+#footer { 
+	color: #fff; 
+	font-size: 1.1em; 
+	padding: 50px 10px; 
+	text-align: center; 
+	background: url(../images/bg-footer.png) repeat-x left bottom;
+}
+#footer p { margin-top: 0px; }
 #footer .link a { background: url(../images/bg-line.png) no-repeat left center; margin-right: 10px; padding-left: 15px; }
 #footer .link a.first { background: none; }
 #footer a { color: #fff; }
 
+.Footer-p {
+margin: 25 0 -20px;
+}
+
+.footer1 {
+  background: url("../images/bgFoor1.png") repeat-x left bottom;
+  clear: both;
+  overflow: hidden;
+}
+.Footin {
+  background: url("../images/footer1.png") no-repeat left top;
+  height: 240px;
+  width: 980px;
+  margin: 0px auto;
+  overflow: hidden;
+}
+.Footer-text {
+  font-family: Arial;
+  font-size: 12px;
+  text-align: left;
+  color: #eee;
+  position: relative;
+  left: 470px;
+  top: 100px;
+  width: 500px;
+}
 /* main */
-#main { background-color: #fff; padding: 5px 5px 0; }
+#main { background-color: #fff; padding: 2px 2px 0; }
 #main .title { background: #254e9b url(../images/bg-title-1.gif) no-repeat; color: #fff; font-size: 1.1em; line-height: 29px; padding-left: 50px; }
 #main .title-2, #main .title-3 { background: url(../images/bg-title-6.gif) no-repeat; color: #898989; padding: 3px 0; text-transform: capitalize; }
 #main .title-2 strong, #main .title-3 strong { display: block; text-align: center; width: 158px; }
 #main .title-3 { background-image: url(../images/bg-title-7.gif); }
-#main .group-1 { background-color: #c6eafa; border: #9c9e9f solid 1px; float: left; height: 303px; position: relative; z-index: 0; width: 726px; }
+
+/*#main .group-1 { background-color: #c6eafa; border: #9c9e9f solid 1px; float: left; height: 303px; position: relative; z-index: 0; width: 990px; }*/
+
+#main .group-1 { background-image: url(../images/b.jpg); } border: #9c9e9f solid 1px; float: left; height: 303px; position: relative; z-index: 0; width: 990px; }
 #main .group-1 img { display: block; }
-#main .group-1 .content { padding: 20px; }
+#main .group-1 .content { padding: 132px; }
 #main .group-1 .content .pic { float: left; margin-right: 30px; text-align: center; width: 128px; }
 #main .group-1 .content .pic img { background-color: #fff; border: #a5a5a5 solid 1px; padding: 3px; }
 #main .group-1 .content .pic .update-pic { margin-top: 5px; }
@@ -247,3 +277,15 @@ html>/**/body #main .group-1 .content .list li .in-group { margin-top: 0px; widt
 .template .news-document p { margin-top: 10px; }
 .template .news-document .date-post { color: #847d7d; }
 .template .STU-poster { padding: 15px 5px 5px; text-align: right; }
+
+.FileFreeChoose {
+				width: 400px;
+				height: 210px;
+				border-top: solid 1px #BBB;
+				border-left: solid 1px #BBB;
+				border-bottom: solid 1px #FFF;
+				border-right: solid 1px #FFF;
+				background: #FFF;
+				overflow: scroll;
+				padding: 5px;
+			}

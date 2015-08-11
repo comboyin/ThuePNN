@@ -168,6 +168,9 @@ var nhatky = function () {
 			
 			// Load danh sách
 			$("button.load").click(function(e){
+				$("input[name='MaSoThueLoad']").val('');
+				$("span.TenGoi").html('');
+				$("span.DiaChi").html('');
 				LoadDanhSach();
 			});
 			// nhat nut edit show dialog

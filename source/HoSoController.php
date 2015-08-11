@@ -43,7 +43,7 @@ if ($Action == 'LoadHS_MST') {
         }
         
         foreach ($Rows as $key => $val) {
-            $Content .= '<li><a href="' . $val['img'] . '"idhoso="' . $val['idhoso'].'" masothue="'.$val['masothue'].'" ghichu="'.$val['ghichu'].'" idloai="'.$val['idloai'].'"' ;
+            $Content .= '<li><a href="' . $val['img'] . '"idhoso="' . $val['idhoso'].'" masothue="'.$val['masothue'].'" ghichu="'.$val['ghichu'].'"idloai="'.$val['idloai'].'"img="'.$val['img'].'"' ;
         $Content .= 'title=""> <strong>' . $val['tenloaihs'] . '</strong> <img ';
         $Content .= 'style="width: 129px; height: 162px;" ';
         $Content .= 'src="' . $val['img'] . '" alt="' . $val['tengoi'] . '"> <span>' . $val['masothue'] . '-' . $val['tengoi'] . '</span> (' . $val['ghichu'] . ') ';
@@ -132,7 +132,7 @@ if ($Action == 'LoadHS_MST') {
     }
     
     foreach ($Rows as $key => $val) {
-        $Content .= '<li><a href="' . $val['img'] . '"idhoso="' . $val['idhoso'].'" masothue="'.$val['masothue'].'" ghichu="'.$val['ghichu'].'" idloai="'.$val['idloai'].'"' ;
+         $Content .= '<li><a href="' . $val['img'] . '"idhoso="' . $val['idhoso'].'" masothue="'.$val['masothue'].'" ghichu="'.$val['ghichu'].'"idloai="'.$val['idloai'].'"img="'.$val['img'].'"' ;
         $Content .= 'title=""> <strong>' . $val['tenloaihs'] . '</strong> <img ';
         $Content .= 'style="width: 129px; height: 162px;" ';
         $Content .= 'src="' . $val['img'] . '" alt="' . $val['tengoi'] . '"> <span>' . $val['masothue'] . '-' . $val['tengoi'] . '</span> (' . $val['ghichu'] . ') ';
@@ -170,6 +170,7 @@ else
         $GhiChu = $_POST['GhiChu'];
         $idLoai = $_POST['idLoai'];
         $idhoso = $_POST['idhoso'];
+        $img = $_POST['img'];
 
         $sql_danhba = "select * from danhba where danhba.masothue = '$MaSoThue'";
         $rs_danhba = mysql_query($sql_danhba);
@@ -181,7 +182,7 @@ else
         // nếu tìm thấy MaSoThue
         if ($iddanhba != 0) {
 
-            $sql = "update hoso set hoso.iddanhba=$iddanhba,hoso.idloai=$idLoai,hoso.ghichu='$GhiChu'  
+            $sql = "update hoso set hoso.img='$img',hoso.iddanhba=$iddanhba,hoso.idloai=$idLoai,hoso.ghichu='$GhiChu'  
             where hoso.idhoso = $idhoso";
 
             mysql_query($sql);

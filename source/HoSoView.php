@@ -74,12 +74,25 @@
 
 			</div>
 		</div>
+		
+		<div class="example">
+			<h3>Danh mục hồ sơ</h3>
+			<div id="fileTreeDemo_1" class="FileFreeChoose"></div>
+		</div>
+		
+		
+		
 		<div class="control-group">
-			<label class="control-label">img: </label>
-			<div class="controls input-icon">
-				<input accept=".jpg,.png" type="file" name="fileToUpload" style="height: 30px;">
-
-			</div>
+			<label class="control-label">Hình ảnh đang chọn: 
+			
+			
+			<h4></h4><span style="color: red;" class="ChooseFile"></span></h4>
+			
+			
+			</label>
+			
+				
+			
 		</div>
 		<div class="control-group">
 			<label class="control-label">Ghi chú:</label>
@@ -96,8 +109,6 @@
 
 			</div>
 		</div>
-
-
 
 		<div class="form-actions">
 			 <button style="display: none;" type="button" class="btn btn-success SubmitThem">Thêm</button>

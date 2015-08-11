@@ -4,11 +4,18 @@ var hoso = function() {
 	var _GhiChu = '';
 	var _idloai = '';
 	var _MaSoThue = '';
+	var _img = '';
 	return {
 		init : function() {
 			
 			// khoi tao phan trang
 			initJpage();
+			
+			//khoi tao file tree
+			$('#fileTreeDemo_1').fileTree({ root: '../hoso/', script: 'connectors/jqueryFileTree.php' }, function(file) {
+				$("span.ChooseFile").html(file);
+			});
+			
 			
 			//lay ten HKD cho dialogThemHoSo
 			function timHKD(MaSoThue){
@@ -44,12 +51,18 @@ var hoso = function() {
 				
 				idLoai = $("#selectLoaiHoSo option:selected").val().trim();
 				
+				
+				imgTemp = $("span.ChooseFile").html();
+				
+				img = imgTemp.substring(3,imgTemp.length);
+				
 					
 					data = {
 							Action : 'SuaHoSo',
 							MaSoThue : MaSoThue,
 							GhiChu : GhiChu,
 							idLoai : idLoai,
+							img : img,
 							idhoso : _idhoso
 						};
 					$.post(baseUrl('source/HoSoController.php'),data,function(json){
@@ -69,7 +82,7 @@ var hoso = function() {
 			}
 
 			function Them(){
-				var fd = new FormData();
+				/*var fd = new FormData();
 				
 				fd.append('fileToUpload',
 						$('input[name="fileToUpload"]')[0].files[0]);
@@ -82,46 +95,45 @@ var hoso = function() {
 						type : 'POST',
 						success : function(html) {
 							
-							file =  html;
-							
-							MaSoThue = $("input[name='MaSoThueThem']").val().trim();
-							
-							GhiChu = $("textarea[name='GhiChu']").val().trim();
-							
-							idLoai = $("#selectLoaiHoSo option:selected").val().trim();
-							
-							
-							if(file.length > 0 ){
-								// "../hoso/database_thuepnn55c76af2dc619.png"
-								img = file.substring(3,file.length);
-								
-								data = {
-										Action : 'ThemHoSo',
-										MaSoThue : MaSoThue,
-										GhiChu : GhiChu,
-										idLoai : idLoai,
-										img : img
-									};
-								$.post(baseUrl('source/HoSoController.php'),data,function(json){
-									
-									if(json['kq']==true){
-										setTimeout(function(){
-											$("#dialogThemHoSo").dialog("close");
-										},700);
-										$("div.ThongBao").html("Thêm thành công !");
-										LoadHoSo(MaSoThue);
-									}else{
-										$("div.ThongBao").html(json['mess']);
-									}
-									
-								},'json')
-							}else{
-								$("div.ThongBao").html("Upload file không thành công !");
-							}
-							
 							
 						}
-					});
+					});*/
+				
+				
+				
+				MaSoThue = $("input[name='MaSoThueThem']").val().trim();
+				
+				GhiChu = $("textarea[name='GhiChu']").val().trim();
+				
+				idLoai = $("#selectLoaiHoSo option:selected").val().trim();
+				
+				
+				
+				// "../hoso/database_thuepnn55c76af2dc619.png"
+				namePathFile = $("span.ChooseFile").html().trim();
+				img = namePathFile.substring(3,namePathFile.length);
+				
+				data = {
+						Action : 'ThemHoSo',
+						MaSoThue : MaSoThue,
+						GhiChu : GhiChu,
+						idLoai : idLoai,
+						img : img
+					};
+				$.post(baseUrl('source/HoSoController.php'),data,function(json){
+					
+					if(json['kq']==true){
+						setTimeout(function(){
+							$("#dialogThemHoSo").dialog("close");
+						},700);
+						$("div.ThongBao").html("Thêm thành công !");
+						LoadHoSo(MaSoThue);
+					}else{
+						$("div.ThongBao").html(json['mess']);
+					}
+					
+				},'json')
+			
 			    
 				
 				
@@ -303,13 +315,15 @@ var hoso = function() {
 				_MaSoThue = $('span.MaSoThue',mfptitle).html().trim();
 				_GhiChu = $('span.GhiChu',mfptitle).html().trim();
 				_idloai = $('span.idloai',mfptitle).html().trim();
+				_img = '../'+$('span.img',mfptitle).html().trim();
 				// load loai ho so
 				
 				timHKD(_MaSoThue);
 				$("input[name='MaSoThueThem']").val(_MaSoThue);
 				$("textarea[name='GhiChu']").val(_GhiChu);
+				$("span.ChooseFile").val();
 				$("#selectLoaiHoSo").val(_idloai);
-				
+				$("span.ChooseFile").html(_img);
 				data = {
 					Action : 'LoadDSLoaiHS'
 				};
@@ -342,10 +356,10 @@ var hoso = function() {
 									titleSrc : function(item) {
 										return item.el.attr('title') + '<span style="display:none;">'+item.el.attr('idhoso')+'</span>' + '<span style="display:none;" class="MaSoThue">'+item.el.attr('MaSoThue')+'</span>' +
 														'<span style="display:none;" class="GhiChu">'+item.el.attr('ghichu')+'</span>' +
-														'<span style="display:none;" class="idloai">'+item.el.attr('idloai')+'</span>'
+														'<span style="display:none;" class="idloai">'+item.el.attr('idloai')+'</span>' +
+														'<span style="display:none;" class="img">'+item.el.attr('img')+'</span>'
 												+ '<button class="btn printHoSo">Print</button>' + 
 												'<button style="margin-left:10px" class="btn Sua">Sửa</button>' +
-												'<button style="margin-left:10px" class="btn SuaImg">Cập nhật image</button>' +
 												'<button style="margin-left:10px" class="btn Xoa">Xóa</button>';
 									}
 								},
@@ -363,6 +377,10 @@ var hoso = function() {
 							});
 			
 			$("button.LoadHoSoAll").click(function(){
+
+				$("input[name='MaSoThue']").val('');
+				$("span.TenGoi").html('');
+				$("span.DiaChi").html('');
 				LoadHoSoAll();
 			});
 			function LoadHoSoAll(){
@@ -398,6 +416,7 @@ var hoso = function() {
 								}, 'json');
 			}
 			function LoadHoSo(MaSoThue){
+				
 				$('span.TenGoi').html('');
 				// destroy
 				$("#ContentHoSo").html('');
@@ -419,6 +438,7 @@ var hoso = function() {
 									$('img.loadingNNT').css('display',
 											'none');
 									count = json['count'];
+									$("input[name='MaSoThue']").val(MaSoThue);
 									$('span.TenGoi').html(
 											json['TenGoi']);
 									$('span.DiaChi').html(
