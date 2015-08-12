@@ -1,3 +1,10 @@
+<style>
+
+div#TableDanhBa_info {
+    margin-top: 20px;
+}
+</style>
+
 <?php include_once 'conections/config_pnn.php';?>
 <?php 
     $sql_danhba = "select * from danhba";

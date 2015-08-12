@@ -167,13 +167,15 @@ var danhba = function () {
 				$("button.SubmitSua").css('display','inline');
 				$("div.ThongBao").html('');
 				tr = $(this).parents('tr')[0];
-				_iddanhba = $('td',tr)[0].innerHTML;
-				MaSoThue = $('td',tr)[1].innerHTML;
-				TenGoi = $('td',tr)[2].innerHTML;
-				SoNha = $('td',tr)[3].innerHTML;
-				TenDuong = $('td',tr)[4].innerHTML;
+				var aData = TableDanhBa.fnGetData(tr);
 				
-				  Todp = $('td',tr)[5].innerHTML;
+				_iddanhba = aData[0].trim();
+				MaSoThue = aData[1].trim();
+				TenGoi = aData[2].trim();
+				SoNha = aData[3].trim();
+				TenDuong = aData[4].trim();
+				
+				  Todp = aData[5].trim();
 				
 				$("input[name='MaSoThue']").val(MaSoThue);
 				$("input[name='TenGoi']").val(TenGoi);
@@ -189,7 +191,10 @@ var danhba = function () {
 				
 				$("h2.ThongBao").html('');
 				tr = $(this).parents('tr')[0];
-				_iddanhba = $('td',tr)[0].innerHTML;
+				
+				var aData = TableDanhBa.fnGetData(tr);
+				
+				_iddanhba = aData[0].trim();
 				$.post(baseUrl('source/DanhBaController.php'),{Action : 'Xoa',iddanhba:_iddanhba},function(json){
 					$('img.loading').css('display','none');
 					kq = json;
@@ -251,8 +256,14 @@ var danhba = function () {
 					}
 				},
 				"aoColumnDefs" : [{
+						'aTargets' : [1],
 						'bSortable' : false,
-						'aTargets' : [0]
+						
+					},
+					{
+						'aTargets' : [0],
+						'bVisible' : false,
+						
 					}
 				]
 			});
